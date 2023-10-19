@@ -22,7 +22,7 @@ https://github.com/wayoda/LedControl
 */
 
 #include "CreativeRobotix.h"
-#include <arduino.h>
+#include <Arduino.h>
 
 
 // Auxilary analoge inputs
