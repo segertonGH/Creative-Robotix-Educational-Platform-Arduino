@@ -25,7 +25,7 @@ https://github.com/wayoda/LedControl
 #define _CreativeRobotix_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
-	#include "arduino.h"
+	#include <Arduino.h>
 	#include <LedControl.h>
 	#include <NewPing.h>
 	#include <Servo.h>
