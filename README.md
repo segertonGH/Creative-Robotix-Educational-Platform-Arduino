@@ -8,11 +8,11 @@ Creative-Robotix can be used by teachers, parents, children, adults, in groups o
 
 [Our website](https://creative-science.org/partnerships/creative-robotix/) has more information about the project, including build Instructables, 
 
-# Download
+## Download
 
-# Install 
+## Install 
 The library can be installed using the [standard Arduino library install procedure](https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-installing-a-library)
 
 This library has two dependencies which also should be installed [LEDControl](https://www.arduino.cc/reference/en/libraries/ledcontrol/) and [NewPing](https://www.arduino.cc/reference/en/libraries/newping/).  The Creative Robotix library makes use the arduino tone function which creates a timmer conflict with the NewPing library.  Edit NewPing.h and change all instances of "#define TIMER_ENABLED true" to "#define TIMER_ENABLED false" to resolve the compile conflict.  The NewPing.h file can be found in the [arduino library folder](https://docs.arduino.cc/hacking/software/Libraries).
 
-# Documentation
+## Documentation
