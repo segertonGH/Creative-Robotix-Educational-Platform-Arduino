@@ -1,4 +1,4 @@
-# Creative-Robotix-Educational-Platform-Arduino
+# Creative Robotix Educational Platform Arduino Library
 An Arduino library for use with the Creative Robotix Educational Platform
 
 Creative Robotix is a project by the Creative Science Foundation.  It is a fully customizable
