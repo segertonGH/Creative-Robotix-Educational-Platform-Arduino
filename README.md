@@ -33,186 +33,123 @@ Initilises the Creative Robotix platform, configures the boards pins and attache
 begin()
 update()
 
-####Servos
+#### <ins>Servos</ins>
+**headAngle(int8_t angle, boolean state)** - this is a placeholder.
 
-**headAngle(int8_t angle, boolean state)** -
-**armLeft(int8_t angle, boolean state)** -
-**armRight(int8_t angle, boolean state)** -
-**wheelLeft(int8_t velocity)** -
-**wheelRight(int8_t velocity)** -
-**hasStopped()** -
+**armLeft(int8_t angle, boolean state)** - this is a placeholder.
+
+**armRight(int8_t angle, boolean state)** - this is a placeholder.
+
+**wheelLeft(int8_t velocity)** - this is a placeholder.
+
+**wheelRight(int8_t velocity)** - this is a placeholder.
+
+**hasStopped()** - this is a placeholder.
 	
-####Behaviours
-**lookAround(uint8_t speed, boolean state)** -
-**swingArms(uint8_t speed, boolean state)** -
+#### <ins>Behaviours</ins>
+**lookAround(uint8_t speed, boolean state)** - this is a placeholder.
 
-#### Display
-**displayScrollText(String text)** -
-**displayImage(uint8_t image)** -
-**displayDigits(uint8_t number)** -
-**displayASCII(uint8_t ascii)** -
-**displayCustom(uint64_t screen)** -
-**displayClear()** -
-**displayReset()** -
-**displayPixel(uint8_t row, uint8_t column, boolean state)** -
-**hasTextToScroll()** -
+**swingArms(uint8_t speed, boolean state)** - this is a placeholder.
 
-#### Audio 'speech'
-**sayDirect(String text)** -
-**say(String text)** -
-**hasTextToSay()** -
+#### <ins>Display</ins>
+**displayScrollText(String text)** - this is a placeholder.
 
-#### Audio melodies and tunes
-**playMelody(uint8_t melody)** -
-**playCustom(uint16_t notes[], uint8_t rduration[], uint8_t notesToPlay)** -
-**playTone(uint16_t frequency, uint16_t duration)** -
-**setMelodySpeed(uint8_t tempo)** -
-**hasMelodytoPlay()** -
+**displayImage(uint8_t image)** - this is a placeholder.
 
-#### Ultrasound
-**readUltrasound(void)** -
-**readUltrasoundMedian(uint8_t window)** -
+**displayDigits(uint8_t number)** - this is a placeholder.
 
-#### Line sensors
-**readLineSensors()** -
-**readLine()** -
+**displayASCII(uint8_t ascii)** - this is a placeholder.
 
-#### User Analoge Inputs
-**readAuxInputs()** -
+**displayCustom(uint64_t screen)** - this is a placeholder.
 
-#### Battery
-**readBatteryVoltage()** -
+**displayClear()** - this is a placeholder.
 
-#### Bluetooth
-**btConfigure(String myRobotName, uint16_t myRobotPin)** -
-**btSetName(String myRobotName)** -
-**btSetPin(uint16_t myRobotPin)** -
+**displayReset()** - this is a placeholder.
 
-### Variables
-**linePosition** -
-**lineState** -
-**auxInputs[]** -
+**displayPixel(uint8_t row, uint8_t column, boolean state)** - this is a placeholder.
 
-### Constants
+**hasTextToScroll()** - this is a placeholder.
+
+#### <ins>Audio 'speech'</ins>
+**sayDirect(String text)** - this is a placeholder.
+
+**say(String text)** - this is a placeholder.
+
+**hasTextToSay()** - this is a placeholder.
+
+#### <ins>Audio melodies and tunes</ins>
+**playMelody(uint8_t melody)** - this is a placeholder.
+
+**playCustom(uint16_t notes[], uint8_t rduration[], uint8_t notesToPlay)** - this is a placeholder.
+
+**playTone(uint16_t frequency, uint16_t duration)** - this is a placeholder.
+
+**setMelodySpeed(uint8_t tempo)** - this is a placeholder.
+
+**hasMelodytoPlay()** - this is a placeholder.
+
+#### <ins>Ultrasound</ins>
+**readUltrasound(void)** - this is a placeholder.
+
+**readUltrasoundMedian(uint8_t window)** - this is a placeholder.
+
+#### <ins>Line sensors</ins>
+**readLineSensors()** - this is a placeholder.
+
+**readLine()** - this is a placeholder.
+
+#### <ins>User Analoge Inputs</ins>
+**readAuxInputs()** - this is a placeholder.
+
+#### <ins>Battery</ins>
+**readBatteryVoltage()** - this is a placeholder.
+
+#### <ins>Bluetooth</ins>
+**btConfigure(String myRobotName, uint16_t myRobotPin)** - this is a placeholder.
+
+**btSetName(String myRobotName)** - this is a placeholder.
+
+**btSetPin(uint16_t myRobotPin)** - this is a placeholder.
+
+### <ins>Variables</ins>
+**linePosition** - this is a placeholder.
+
+**lineState** - this is a placeholder.
+
+**auxInputs[]** - this is a placeholder.
+
+### <ins>Constants</ins>
 
 Dipslay constants refernces the number of LED in the display height and width
-**DISPLAY_HEIGHT**
-**DISPLAY_WIDTH**
+
+**DISPLAY_HEIGHT**, **DISPLAY_WIDTH**
 
 Built in images for use with the **diaplayImage** method
-**DISPLAY_SMILE**
-**DISPLAY_NEUTRAL**
-**DISPLAY_FROWN**
-**DISPLAY_QUESTION**
-**DISPLAY_OK**
-**DISPLAY_TICK**
-**DISPLAY_CROSS**
-**DISPLAY_ROCK**
-**DISPLAY_PAPER**
-**DISPLAY_SISSORS**
-**DISPLAY_QUAVER**
-**DISPLAY_QUAVERx2**
-**DISPLAY_HEART**
-**DISPLAY_BLANK**
+
+**DISPLAY_SMILE**, **DISPLAY_NEUTRAL**, **DISPLAY_FROWN**, **DISPLAY_QUESTION**, **DISPLAY_OK**, **DISPLAY_TICK**, **DISPLAY_CROSS**, **DISPLAY_ROCK**, **DISPLAY_PAPER**, **DISPLAY_SISSORS**, **DISPLAY_QUAVER**, **DISPLAY_QUAVERx2**, **DISPLAY_HEART**, **DISPLAY_BLANK**
 
 Built in Melodies for use with the **playMelody** method 
 
-**MELODY_GREENSLEEVES**
-**MELODY_LITTLELAMB**
-**MELODY_HAPPYBIRTHDAY**
-**MELODY_STARWARS**
-**MELODY_CHARIOTS**
+**MELODY_GREENSLEEVES**, **MELODY_LITTLELAMB**, **MELODY_HAPPYBIRTHDAY**, **MELODY_STARWARS**, **MELODY_CHARIOTS**
 
-Note definitions for use with **playTone** and **playMelody** methods
+Note definitions for use with **playTone** and **playMelody** methods.  Eight octaves.
 
 **NOTE_RST**
+
 **NOTE_B0**
-**NOTE_C1**
-**NOTE_CS1**
-**NOTE_D1**
-**NOTE_DS1**
-**NOTE_E1**
-**NOTE_F1**
-**NOTE_FS1**
-**NOTE_G1**
-**NOTE_GS1**
-**NOTE_A1**
-**NOTE_AS1**
-**NOTE_B1**
-**NOTE_C2**
-**NOTE_CS2**
-**NOTE_D2**
-**NOTE_DS2**
-**NOTE_E2**
-**NOTE_F2**
-**NOTE_FS2**
-**NOTE_G2**
-**NOTE_GS2**
-**NOTE_A2**
-**NOTE_AS2**
-**NOTE_B2**
-**NOTE_C3**
-**NOTE_CS3**
-**NOTE_D3**
-**NOTE_DS3**
-**NOTE_E3**
-**NOTE_F3**
-**NOTE_FS3
-**NOTE_G3**
-**NOTE_GS3**
-**NOTE_A3**
-**NOTE_AS3**
-**NOTE_B3**
-**NOTE_C4**
-**NOTE_CS4**
-**NOTE_D4**
-**NOTE_DS4**
-**NOTE_E4**
-**NOTE_F4**
-**NOTE_FS4**
-**NOTE_G4**
-**NOTE_GS4**
-**NOTE_A4**
-**NOTE_AS4**
-**NOTE_B4**
-**NOTE_C5**
-**NOTE_CS5**
-**NOTE_D5**
-**NOTE_DS5**
-**NOTE_E5**
-**NOTE_F5**
-**NOTE_FS5**
-**NOTE_G5**
-**NOTE_GS5**
-**NOTE_A5**
-**NOTE_AS5**
-**NOTE_B5**
-**NOTE_C6**
-**NOTE_CS6**
-**NOTE_D6**
-**NOTE_DS6**
-**NOTE_E6**
-**NOTE_F6**
-**NOTE_FS6**
-**NOTE_G6**
-**NOTE_GS6**
-**NOTE_A6**
-**NOTE_AS6**
-**NOTE_B6**
-**NOTE_C7**
-**NOTE_CS7**
-**NOTE_D7**
-**NOTE_DS7**
-**NOTE_E7**
-**NOTE_F7**
-**NOTE_FS7**
-**NOTE_G7**
-**NOTE_GS7**
-**NOTE_A7**
-**NOTE_AS7**
-**NOTE_B7**
-**NOTE_C8**
-**NOTE_CS8**
-**NOTE_D8**
-**NOTE_DS8**
-**NOTE_P0**
+
+**NOTE_C1**, **NOTE_CS1**, **NOTE_D1**, **NOTE_DS1**, **NOTE_E1**. **NOTE_F1**, **NOTE_FS1**, **NOTE_G1**, **NOTE_GS1**, **NOTE_A1**, **NOTE_AS1**, **NOTE_B1**
+
+**NOTE_C2**, **NOTE_CS2**, **NOTE_D2**, **NOTE_DS2**, **NOTE_E2**, **NOTE_F2**, **NOTE_FS2**, **NOTE_G2**, **NOTE_GS2**, **NOTE_A2**, **NOTE_AS2**, **NOTE_B2**
+
+**NOTE_C3**, **NOTE_CS3**, **NOTE_D3**, **NOTE_DS3**, **NOTE_E3**, **NOTE_F3**, **NOTE_FS3**, **NOTE_G3**, **NOTE_GS3**, **NOTE_A3**, **NOTE_AS3**, **NOTE_B3**
+
+**NOTE_C4**, **NOTE_CS4**, **NOTE_D4**, **NOTE_DS4**, **NOTE_E4**, **NOTE_F4**, **NOTE_FS4**, **NOTE_G4**, **NOTE_GS4**, **NOTE_A4**, **NOTE_AS4**, **NOTE_B4**
+
+**NOTE_C5**, **NOTE_CS5**, **NOTE_D5**, **NOTE_DS5**, **NOTE_E5**, **NOTE_F5**, **NOTE_FS5**, **NOTE_G5**, **NOTE_GS5**, **NOTE_A5**, **NOTE_AS5**, **NOTE_B5**
+
+**NOTE_C6**, **NOTE_CS6**, **NOTE_D6**, **NOTE_DS6**, **NOTE_E6**, **NOTE_F6**, **NOTE_FS6**, **NOTE_G6**, **NOTE_GS6**, **NOTE_A6**, **NOTE_AS6**, **NOTE_B6**
+
+**NOTE_C7**, **NOTE_CS7**, **NOTE_D7**, **NOTE_DS7**, **NOTE_E7**, **NOTE_F7**, **NOTE_FS7**, **NOTE_G7**, **NOTE_GS7**, **NOTE_A7**, **NOTE_AS7**, **NOTE_B7**
+
+**NOTE_C8**, **NOTE_CS8**, **NOTE_D8**, **NOTE_DS8**, **NOTE_E8**, **NOTE_F8**, **NOTE_FS8**, **NOTE_G8**, **NOTE_GS8**, **NOTE_A8**, **NOTE_AS8**, **NOTE_B8**
