@@ -27,7 +27,8 @@
 
 #include "CreativeRobotix.h"
 
-CreativeRobotix codee = CreativeRobotix();
+ // set up a new robot instance called codee
+CreativeRobotix codee;
 
 void setup() {
 	// initilaise codee 

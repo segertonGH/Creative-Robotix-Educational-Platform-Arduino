@@ -17,7 +17,8 @@
 
 #include "CreativeRobotix.h"
 
-CreativeRobotix codee = CreativeRobotix();
+ // set up a new robot instance called codee
+CreativeRobotix codee;
 
 // the setup function runs once when you press reset or power the board
 void setup() {

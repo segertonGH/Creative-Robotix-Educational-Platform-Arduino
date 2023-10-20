@@ -40,7 +40,8 @@ MELODY_CHARIOTS		45cm - 50cm
 uint16_t interval = 0;
 uint8_t userInput = 0, userSelection = 0;
 
-CreativeRobotix codee = CreativeRobotix(); 
+// set up a new robot instance called codee
+CreativeRobotix codee;
 
 void setup() {
 	// initilaise codee 

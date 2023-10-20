@@ -25,7 +25,8 @@
 
 #define INTERVAL	25
 
-CreativeRobotix codee = CreativeRobotix();
+ // set up a new robot instance called codee
+CreativeRobotix codee;
 
 uint32_t randomDisplayHigh, randomDisplayLow;
 

@@ -46,7 +46,8 @@
 int8_t lf_state_leftw[] = {	 9,	9,	9,	9,	9,	0,	0,	0,	0,	0,	0 };
 int8_t lf_state_rightw[] = { 0,	0,	0,	0,	6,	6,	6,	6,	6,	0,	0 };
 
-CreativeRobotix codee = CreativeRobotix();
+// set up a new robot instance called codee
+CreativeRobotix codee;
 
 // the setup function runs once when you press reset or power the board
 void setup() {

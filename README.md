@@ -13,6 +13,206 @@ Creative-Robotix can be used by teachers, parents, children, adults, in groups o
 ## Install 
 The library can be installed using the [standard Arduino library install procedure](https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-installing-a-library)
 
-This library has two dependencies which also should be installed [LEDControl](https://www.arduino.cc/reference/en/libraries/ledcontrol/) and [NewPing](https://www.arduino.cc/reference/en/libraries/newping/).  The Creative Robotix library makes use the arduino tone function which creates a timmer conflict with the NewPing library.  Edit NewPing.h and change all instances of "#define TIMER_ENABLED true" to "#define TIMER_ENABLED false" to resolve the compile conflict.  The NewPing.h file can be found in the [arduino library folder](https://docs.arduino.cc/hacking/software/Libraries).
+This library has two library dependencies [LEDControl](https://www.arduino.cc/reference/en/libraries/ledcontrol/) and [NewPing](https://www.arduino.cc/reference/en/libraries/newping/).  Accept their installation when asked by the Arduino IDE.  The Creative Robotix library makes use the arduino tone function which creates a timmer conflict with the NewPing library.  To resolve this conflict, open NewPing.h and change all instances of " TIMER_ENABLED true" to " TIMER_ENABLED false" before saving.  The NewPing.h file can be found in the [arduino library folder](https://docs.arduino.cc/hacking/software/Libraries).
 
 ## Documentation
+
+
+### Working with the examples
+
+Libary examples can be found from the Arduino IDE File -> Examples -> CreativeRobotix.  To compile the library examples for the Arduino Creative Robotix platform select Tools -> Board -> Arduino AVR Boards -> Arduino Nano.  The Arduino Nano has two bootloder varients these can be found from Tools -> Processor.  Select the "ATmega 328P(old Booloader).  If the upload is not successful, then try the "ATmega 328P" processor.  If neither processors are successful then check the Bluetooth Enable jummper and ensure that it it removed.  If the jumper is removed, then check that the NewPing.h file has been successfully updated.
+
+### Constructor
+
+**CreativeRobotix codee**
+
+Initilises the Creative Robotix platform, configures the boards pins and attached devices for use.
+
+### Methods
+
+begin()
+update()
+
+####Servos
+
+**headAngle(int8_t angle, boolean state)** -
+**armLeft(int8_t angle, boolean state)** -
+**armRight(int8_t angle, boolean state)** -
+**wheelLeft(int8_t velocity)** -
+**wheelRight(int8_t velocity)** -
+**hasStopped()** -
+	
+####Behaviours
+**lookAround(uint8_t speed, boolean state)** -
+**swingArms(uint8_t speed, boolean state)** -
+
+#### Display
+**displayScrollText(String text)** -
+**displayImage(uint8_t image)** -
+**displayDigits(uint8_t number)** -
+**displayASCII(uint8_t ascii)** -
+**displayCustom(uint64_t screen)** -
+**displayClear()** -
+**displayReset()** -
+**displayPixel(uint8_t row, uint8_t column, boolean state)** -
+**hasTextToScroll()** -
+
+#### Audio 'speech'
+**sayDirect(String text)** -
+**say(String text)** -
+**hasTextToSay()** -
+
+#### Audio melodies and tunes
+**playMelody(uint8_t melody)** -
+**playCustom(uint16_t notes[], uint8_t rduration[], uint8_t notesToPlay)** -
+**playTone(uint16_t frequency, uint16_t duration)** -
+**setMelodySpeed(uint8_t tempo)** -
+**hasMelodytoPlay()** -
+
+#### Ultrasound
+**readUltrasound(void)** -
+**readUltrasoundMedian(uint8_t window)** -
+
+#### Line sensors
+**readLineSensors()** -
+**readLine()** -
+
+#### User Analoge Inputs
+**readAuxInputs()** -
+
+#### Battery
+**readBatteryVoltage()** -
+
+#### Bluetooth
+**btConfigure(String myRobotName, uint16_t myRobotPin)** -
+**btSetName(String myRobotName)** -
+**btSetPin(uint16_t myRobotPin)** -
+
+### Variables
+**linePosition** -
+**lineState** -
+**auxInputs[]** -
+
+### Constants
+
+Dipslay constants refernces the number of LED in the display height and width
+**DISPLAY_HEIGHT**
+**DISPLAY_WIDTH**
+
+Built in images for use with the **diaplayImage** method
+**DISPLAY_SMILE**
+**DISPLAY_NEUTRAL**
+**DISPLAY_FROWN**
+**DISPLAY_QUESTION**
+**DISPLAY_OK**
+**DISPLAY_TICK**
+**DISPLAY_CROSS**
+**DISPLAY_ROCK**
+**DISPLAY_PAPER**
+**DISPLAY_SISSORS**
+**DISPLAY_QUAVER**
+**DISPLAY_QUAVERx2**
+**DISPLAY_HEART**
+**DISPLAY_BLANK**
+
+Built in Melodies for use with the **playMelody** method 
+
+**MELODY_GREENSLEEVES**
+**MELODY_LITTLELAMB**
+**MELODY_HAPPYBIRTHDAY**
+**MELODY_STARWARS**
+**MELODY_CHARIOTS**
+
+Note definitions for use with **playTone** and **playMelody** methods
+
+**NOTE_RST**
+**NOTE_B0**
+**NOTE_C1**
+**NOTE_CS1**
+**NOTE_D1**
+**NOTE_DS1**
+**NOTE_E1**
+**NOTE_F1**
+**NOTE_FS1**
+**NOTE_G1**
+**NOTE_GS1**
+**NOTE_A1**
+**NOTE_AS1**
+**NOTE_B1**
+**NOTE_C2**
+**NOTE_CS2**
+**NOTE_D2**
+**NOTE_DS2**
+**NOTE_E2**
+**NOTE_F2**
+**NOTE_FS2**
+**NOTE_G2**
+**NOTE_GS2**
+**NOTE_A2**
+**NOTE_AS2**
+**NOTE_B2**
+**NOTE_C3**
+**NOTE_CS3**
+**NOTE_D3**
+**NOTE_DS3**
+**NOTE_E3**
+**NOTE_F3**
+**NOTE_FS3
+**NOTE_G3**
+**NOTE_GS3**
+**NOTE_A3**
+**NOTE_AS3**
+**NOTE_B3**
+**NOTE_C4**
+**NOTE_CS4**
+**NOTE_D4**
+**NOTE_DS4**
+**NOTE_E4**
+**NOTE_F4**
+**NOTE_FS4**
+**NOTE_G4**
+**NOTE_GS4**
+**NOTE_A4**
+**NOTE_AS4**
+**NOTE_B4**
+**NOTE_C5**
+**NOTE_CS5**
+**NOTE_D5**
+**NOTE_DS5**
+**NOTE_E5**
+**NOTE_F5**
+**NOTE_FS5**
+**NOTE_G5**
+**NOTE_GS5**
+**NOTE_A5**
+**NOTE_AS5**
+**NOTE_B5**
+**NOTE_C6**
+**NOTE_CS6**
+**NOTE_D6**
+**NOTE_DS6**
+**NOTE_E6**
+**NOTE_F6**
+**NOTE_FS6**
+**NOTE_G6**
+**NOTE_GS6**
+**NOTE_A6**
+**NOTE_AS6**
+**NOTE_B6**
+**NOTE_C7**
+**NOTE_CS7**
+**NOTE_D7**
+**NOTE_DS7**
+**NOTE_E7**
+**NOTE_F7**
+**NOTE_FS7**
+**NOTE_G7**
+**NOTE_GS7**
+**NOTE_A7**
+**NOTE_AS7**
+**NOTE_B7**
+**NOTE_C8**
+**NOTE_CS8**
+**NOTE_D8**
+**NOTE_DS8**
+**NOTE_P0**

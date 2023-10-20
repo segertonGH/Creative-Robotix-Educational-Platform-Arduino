@@ -47,7 +47,8 @@ boolean gameOver = false;
 static unsigned long l_currentMillis_b = 0;
 static unsigned long l_previousMillis_b = 0;
 
-CreativeRobotix codee = CreativeRobotix();
+// set up a new robot instance called codee
+CreativeRobotix codee;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
