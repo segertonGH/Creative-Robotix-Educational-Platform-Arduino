@@ -48,90 +48,90 @@ Initilises the Creative Robotix platform and configures the boards pins.
 * **hasStopped()** - Returns **true** if both wheels have stopped, **false** otherwise.
 	
 #### <ins>Behaviours</ins>
-**lookAround(uint8_t speed, boolean state)** - this is a placeholder.
+* **lookAround(uint8_t speed, boolean state)** - this is a placeholder.
 
-**swingArms(uint8_t speed, boolean state)** - this is a placeholder.
+* **swingArms(uint8_t speed, boolean state)** - this is a placeholder.
 
 #### <ins>Display</ins>
-**displayScrollText(String text)** - this is a placeholder.
+* **displayScrollText(String text)** - this is a placeholder.
 
-**displayImage(uint8_t image)** - this is a placeholder.
+* **displayImage(uint8_t image)** - this is a placeholder.
 
-**displayDigits(uint8_t number)** - this is a placeholder.
+* **displayDigits(uint8_t number)** - this is a placeholder.
 
-**displayASCII(uint8_t ascii)** - this is a placeholder.
+* **displayASCII(uint8_t ascii)** - this is a placeholder.
 
-**displayCustom(uint64_t screen)** - this is a placeholder.
+* **displayCustom(uint64_t screen)** - this is a placeholder.
 
-**displayClear()** - this is a placeholder.
+* **displayClear()** - this is a placeholder.
 
-**displayReset()** - this is a placeholder.
+* **displayReset()** - this is a placeholder.
 
-**displayPixel(uint8_t row, uint8_t column, boolean state)** - this is a placeholder.
+* **displayPixel(uint8_t row, uint8_t column, boolean state)** - this is a placeholder.
 
-**hasTextToScroll()** - this is a placeholder.
+* **hasTextToScroll()** - this is a placeholder.
 
 #### <ins>Audio 'speech'</ins>
-**sayDirect(String text)** - this is a placeholder.
+* **sayDirect(String text)** - this is a placeholder.
 
-**say(String text)** - this is a placeholder.
+* **say(String text)** - this is a placeholder.
 
-**hasTextToSay()** - this is a placeholder.
+* **hasTextToSay()** - this is a placeholder.
 
 #### <ins>Audio melodies and tunes</ins>
-**playMelody(uint8_t melody)** - this is a placeholder.
+* **playMelody(uint8_t melody)** - this is a placeholder.
 
-**playCustom(uint16_t notes[], uint8_t rduration[], uint8_t notesToPlay)** - this is a placeholder.
+* **playCustom(uint16_t notes[], uint8_t rduration[], uint8_t notesToPlay)** - this is a placeholder.
 
-**playTone(uint16_t frequency, uint16_t duration)** - this is a placeholder.
+* **playTone(uint16_t frequency, uint16_t duration)** - this is a placeholder.
 
-**setMelodySpeed(uint8_t tempo)** - this is a placeholder.
+* **setMelodySpeed(uint8_t tempo)** - this is a placeholder.
 
-**hasMelodytoPlay()** - this is a placeholder.
+* **hasMelodytoPlay()** - this is a placeholder.
 
 #### <ins>Ultrasound</ins>
-**readUltrasound(void)** - this is a placeholder.
+* **readUltrasound(void)** - this is a placeholder.
 
-**readUltrasoundMedian(uint8_t window)** - this is a placeholder.
+* **readUltrasoundMedian(uint8_t window)** - this is a placeholder.
 
 #### <ins>Line sensors</ins>
-**readLineSensors()** - this is a placeholder.
+* **readLineSensors()** - this is a placeholder.
 
-**readLine()** - this is a placeholder.
+* **readLine()** - this is a placeholder.
 
 #### <ins>User Analoge Inputs</ins>
-**readAuxInputs()** - this is a placeholder.
+* **readAuxInputs()** - this is a placeholder.
 
 #### <ins>Battery</ins>
-**readBatteryVoltage()** - this is a placeholder.
+* **readBatteryVoltage()** - this is a placeholder.
 
 #### <ins>Bluetooth</ins>
-**btConfigure(String myRobotName, uint16_t myRobotPin)** - this is a placeholder.
+* **btConfigure(String myRobotName, uint16_t myRobotPin)** - this is a placeholder.
 
-**btSetName(String myRobotName)** - this is a placeholder.
+* **btSetName(String myRobotName)** - this is a placeholder.
 
-**btSetPin(uint16_t myRobotPin)** - this is a placeholder.
+* **btSetPin(uint16_t myRobotPin)** - this is a placeholder.
 
 ### <ins>Variables</ins>
-**linePosition** - this is a placeholder.
+* **linePosition** - this is a placeholder.
 
-**lineState** - this is a placeholder.
+* **lineState** - this is a placeholder.
 
-**auxInputs[]** - this is a placeholder.
+* **auxInputs[]** - this is a placeholder.
 
 ### <ins>Constants</ins>
 
 Dipslay constants refernces the number of LED in the display height and width
 
-**DISPLAY_HEIGHT**, **DISPLAY_WIDTH**
+* **DISPLAY_HEIGHT**, **DISPLAY_WIDTH**
 
 Built in images for use with the **diaplayImage** method
 
-**DISPLAY_SMILE**, **DISPLAY_NEUTRAL**, **DISPLAY_FROWN**, **DISPLAY_QUESTION**, **DISPLAY_OK**, **DISPLAY_TICK**, **DISPLAY_CROSS**, **DISPLAY_ROCK**, **DISPLAY_PAPER**, **DISPLAY_SISSORS**, **DISPLAY_QUAVER**, **DISPLAY_QUAVERx2**, **DISPLAY_HEART**, **DISPLAY_BLANK**
+* **DISPLAY_SMILE**, **DISPLAY_NEUTRAL**, **DISPLAY_FROWN**, **DISPLAY_QUESTION**, **DISPLAY_OK**, **DISPLAY_TICK**, **DISPLAY_CROSS**, **DISPLAY_ROCK**, **DISPLAY_PAPER**, **DISPLAY_SISSORS**, **DISPLAY_QUAVER**, **DISPLAY_QUAVERx2**, **DISPLAY_HEART**, **DISPLAY_BLANK**
 
 Built in Melodies for use with the **playMelody** method 
 
-**MELODY_GREENSLEEVES**, **MELODY_LITTLELAMB**, **MELODY_HAPPYBIRTHDAY**, **MELODY_STARWARS**, **MELODY_CHARIOTS**
+* **MELODY_GREENSLEEVES**, **MELODY_LITTLELAMB**, **MELODY_HAPPYBIRTHDAY**, **MELODY_STARWARS**, **MELODY_CHARIOTS**
 
 Note definitions for use with **playTone** and **playMelody** methods.  Eight octaves.
 
