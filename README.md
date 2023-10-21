@@ -30,22 +30,22 @@ Initilises the Creative Robotix platform and configures the boards pins.
 
 ### Methods
 
-**begin()** - Initilises display and says "Hello World!"
+* **begin()** - Initilises display and says "Hello World!"
 
-**update()** - This method is called to update the robots built in behaviours, swing arms, looks around, scroll text and audio.
+* **update()** - This method is called to update the robots built in behaviours, swing arms, looks around, scroll text and audio.
 
 #### <ins>Servos</ins>
-**headAngle(int8_t angle, boolean state)** - Set head angle, 0 centre, positive values right, negative values left.  State **true** to action the request and keep servo active.  State **false** to deactivate servo, angle has no effect. 
+* **headAngle(int8_t angle, boolean state)** - Set head angle, 0 centre, positive values right, negative values left.  State **true** to action the request and keep servo active.  State **false** to deactivate servo, angle has no effect. 
 
-**armLeft(int8_t angle, boolean state)** - Set arm angle, 0 centre, positive values up above centre, negative value down below centre.  State **true** to action the request and keep servo active.  State **false** to deactivate servo, angle has no effect. 
+* **armLeft(int8_t angle, boolean state)** - Set arm angle, 0 centre, positive values up above centre, negative value down below centre.  State **true** to action the request and keep servo active.  State **false** to deactivate servo, angle has no effect. 
 
-**armRight(int8_t angle, boolean state)** - Same as **armLeft**
+* **armRight(int8_t angle, boolean state)** - Same as **armLeft**
 
-**wheelLeft(int8_t velocity)** - Positive values turn the wheel forward, negative values turn the wheen backward.  0 stops the wheel.
+* **wheelLeft(int8_t velocity)** - Positive values turn the wheel forward, negative values turn the wheen backward.  0 stops the wheel.
 
-**wheelRight(int8_t velocity)** - Same as **wheelLeft**.
+* **wheelRight(int8_t velocity)** - Same as **wheelLeft**.
 
-**hasStopped()** - Returns **true** if both wheels have stopped, **false** otherwise.
+* **hasStopped()** - Returns **true** if both wheels have stopped, **false** otherwise.
 	
 #### <ins>Behaviours</ins>
 **lookAround(uint8_t speed, boolean state)** - this is a placeholder.
