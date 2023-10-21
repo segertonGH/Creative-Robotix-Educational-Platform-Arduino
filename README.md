@@ -30,8 +30,9 @@ Initilises the Creative Robotix platform, configures the boards pins and attache
 
 ### Methods
 
-begin()
-update()
+**begin()** - this is a placeholder.
+
+**update()** - this is a placeholder.
 
 #### <ins>Servos</ins>
 **headAngle(int8_t angle, boolean state)** - this is a placeholder.
