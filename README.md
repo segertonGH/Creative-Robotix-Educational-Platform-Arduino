@@ -35,9 +35,9 @@ Initilises the Creative Robotix platform and configures the boards pins.
 **update()** - This method is called to update the robots built in behaviours, swing arms, looks around, scroll text and audio.
 
 #### <ins>Servos</ins>
-**headAngle(int8_t angle, boolean state)** - Set the angle of the robots head, 0 moves the head to the centre, positive values move the head to the right, negative values move the head to the left.  State should be set to **true** to action the request, the robot will then move the head to the requested angle and the head servo remains active and maintains the head at the specified angle.  When the state is set to **false** angle has no effect and the head servo is deactivated. 
+**headAngle(int8_t angle, boolean state)** - Set head angle, 0 centre, positive values right, negative values left.  State **true** to action the request and keep servo active.  State **false** to deactivate servo, angle has no effect. 
 
-**armLeft(int8_t angle, boolean state)** - Set the angle of the robots left arm, 0 moves the arm to the centre, positive values move the arm up above centre, negative values move the arm down below centre.  State should be set to **true** to action the request, the robot will then move the arm to the requested angle and the arm servo remains active and maintains the arm at the specified angle.  When the state is set to **false** angle has no effect and the arm servo is deactivated. 
+**armLeft(int8_t angle, boolean state)** - Set arm angle, 0 centre, positive values up above centre, negative value down below centre.  State **true** to action the request and keep servo active.  State **false** to deactivate servo, angle has no effect. 
 
 **armRight(int8_t angle, boolean state)** - Same as **armLeft**
 
