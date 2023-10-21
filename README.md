@@ -26,26 +26,26 @@ Libary examples can be found from the Arduino IDE File -> Examples -> CreativeRo
 
 **CreativeRobotix codee**
 
-Initilises the Creative Robotix platform, configures the boards pins and attached devices for use.
+Initilises the Creative Robotix platform and configures the boards pins.
 
 ### Methods
 
-**begin()** - this is a placeholder.
+**begin()** - Initilises display and says "Hello World!"
 
-**update()** - this is a placeholder.
+**update()** - This method is called to update the robots built in behaviours, swing arms, looks around, scroll text and audio.
 
 #### <ins>Servos</ins>
-**headAngle(int8_t angle, boolean state)** - this is a placeholder.
+**headAngle(int8_t angle, boolean state)** - Set the angle of the robots head, 0 moves the head to the centre, positive values move the head to the right, negative values move the head to the left.  State should be set to **true** to action the request, the robot will then move the head to the requested angle and the head servo remains active and maintains the head at the specified angle.  When the state is set to **false** angle has no effect and the head servo is deactivated. 
 
-**armLeft(int8_t angle, boolean state)** - this is a placeholder.
+**armLeft(int8_t angle, boolean state)** - Set the angle of the robots left arm, 0 moves the arm to the centre, positive values move the arm up above centre, negative values move the arm down below centre.  State should be set to **true** to action the request, the robot will then move the arm to the requested angle and the arm servo remains active and maintains the arm at the specified angle.  When the state is set to **false** angle has no effect and the arm servo is deactivated. 
 
-**armRight(int8_t angle, boolean state)** - this is a placeholder.
+**armRight(int8_t angle, boolean state)** - Same as **armLeft**
 
-**wheelLeft(int8_t velocity)** - this is a placeholder.
+**wheelLeft(int8_t velocity)** - Positive values turn the wheel forward, negative values turn the wheen backward.  0 stops the wheel.
 
-**wheelRight(int8_t velocity)** - this is a placeholder.
+**wheelRight(int8_t velocity)** - Same as **wheelLeft**.
 
-**hasStopped()** - this is a placeholder.
+**hasStopped()** - Returns **true** if both wheels have stopped, **false** otherwise.
 	
 #### <ins>Behaviours</ins>
 **lookAround(uint8_t speed, boolean state)** - this is a placeholder.
