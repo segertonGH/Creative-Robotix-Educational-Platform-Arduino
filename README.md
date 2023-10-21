@@ -53,66 +53,68 @@ Initilises the Creative Robotix platform and configures the boards pins.
 * **swingArms(uint8_t speed, boolean state)** - this is a placeholder.
 
 #### <ins>Display</ins>
-* **displayScrollText(String text)** - this is a placeholder.
+* **displayScrollText(String text)** - Scroll text, upto 40 characters.  This method scolls text only once.  If continiously called, the same message will continue to scroll.
 
-* **displayImage(uint8_t image)** - this is a placeholder.
+* **displayImage(uint8_t image)** - Display one of the built in images, see display constants below.
 
-* **displayDigits(uint8_t number)** - this is a placeholder.
+* **displayDigits(uint8_t number)** - Display a digit between 0 and 99
 
-* **displayASCII(uint8_t ascii)** - this is a placeholder.
+* **displayASCII(uint8_t ascii)** - Display an ASCII charecter 
 
-* **displayCustom(uint64_t screen)** - this is a placeholder.
+* **displayCustom(uint64_t screen)** - Displays custom screen value.  Screen values are 8 bytes in hex 0XAABBCCDDEEFFGGHH where the letters A - H each represent one screen line from top to bottom.
 
-* **displayClear()** - this is a placeholder.
+* **displayClear()** - Clear display.
 
-* **displayReset()** - this is a placeholder.
+* **displayReset()** - Stop scrolling text and return screen to previous state.
 
-* **displayPixel(uint8_t row, uint8_t column, boolean state)** - this is a placeholder.
+* **displayPixel(uint8_t row, uint8_t column, boolean state)** -  Set state of LED at row & column.  State **true** on.  State **false** off.
 
-* **hasTextToScroll()** - this is a placeholder.
+* **hasTextToScroll()** - Returns **true** when there is message text to scroll.  Returns **false** when message has finished scrolling. 
 
 #### <ins>Audio 'speech'</ins>
-* **sayDirect(String text)** - this is a placeholder.
+* **sayDirect(String text)** - Says provided text, blocking method.
 
-* **say(String text)** - this is a placeholder.
+* **say(String text)** - Says provided text, non-blocking method.
 
-* **hasTextToSay()** - this is a placeholder.
+* **hasTextToSay()** - Returns **true** when there is text to say.  Returns **false** when text to say has finished.  Used for non-blocking method. 
 
 #### <ins>Audio melodies and tunes</ins>
-* **playMelody(uint8_t melody)** - this is a placeholder.
+* **playMelody(uint8_t melody)** - Plays built in melody, see melody constants below.  Melody plays once then stops.  If continiously called, the same melody will continue to play.
 
-* **playCustom(uint16_t notes[], uint8_t rduration[], uint8_t notesToPlay)** - this is a placeholder.
+* **playCustom(uint16_t notes[], uint8_t rduration[], uint8_t notesToPlay)** - Plays a user melody provide by the note array, note durations are provided by the reciprocal duration array, notesToPlay specifies the total number of notes.
 
-* **playTone(uint16_t frequency, uint16_t duration)** - this is a placeholder.
+* **playTone(uint16_t frequency, uint16_t duration)** - Plays a note at the specificed frequency and duration.
 
-* **setMelodySpeed(uint8_t tempo)** - this is a placeholder.
+* **setMelodySpeed(uint8_t tempo)** - Sets the speed or tempo of the melody playback.
 
-* **hasMelodytoPlay()** - this is a placeholder.
+* **hasMelodytoPlay()** - Returns **true** when a melody is playing.  Returns **false** when the melody has finished. 
 
 #### <ins>Ultrasound</ins>
-* **readUltrasound(void)** - this is a placeholder.
+* **readUltrasound(void)** - Returns the current ultrasound reading in **cm**, maximum distance read 60cm.
 
-* **readUltrasoundMedian(uint8_t window)** - this is a placeholder.
+* **readUltrasoundMedian(uint8_t window)** - Returns median ultrasound reading in **cm**.  Windows specifies number of measurements.
 
 #### <ins>Line sensors</ins>
-* **readLineSensors()** - this is a placeholder.
+* **readLineSensors()** - Reads robots linesensors and updates class array **lineSensors**.  See class variable descriptions below.
 
-* **readLine()** - this is a placeholder.
+* **readLine()** - Updates class variables **linePosition** and **lineState** to indicate robots position relative to a non-reflective line.  See class variable descriptions below.
 
 #### <ins>User Analoge Inputs</ins>
-* **readAuxInputs()** - this is a placeholder.
+* **readAuxInputs()** - Updates class array auxInputs.  See class variable descriptions below.
 
 #### <ins>Battery</ins>
-* **readBatteryVoltage()** - this is a placeholder.
+* **readBatteryVoltage()** - Returns battery volatage as an integer.  Divide return by 10 for actual voltage i.e. a return value of 47 means a voltage reading of 4.7 volts.
 
 #### <ins>Bluetooth</ins>
-* **btConfigure(String myRobotName, uint16_t myRobotPin)** - this is a placeholder.
+* **btConfigure(String myRobotName, uint16_t myRobotPin)** - Configure the Creative Robotix bluetooth module for 57600 baud and set the bluetooth myRobotname and pin.
 
-* **btSetName(String myRobotName)** - this is a placeholder.
+* **btSetName(String myRobotName)** - Set the robots bluetooth name.
 
-* **btSetPin(uint16_t myRobotPin)** - this is a placeholder.
+* **btSetPin(uint16_t myRobotPin)** - Set the robots bluetooth pin.
 
 ### <ins>Variables</ins>
+* **lineSensors** - this is a placeholder.
+
 * **linePosition** - this is a placeholder.
 
 * **lineState** - this is a placeholder.
@@ -135,22 +137,22 @@ Built in Melodies for use with the **playMelody** method
 
 Note definitions for use with **playTone** and **playMelody** methods.  Eight octaves.
 
-**NOTE_RST**
+* **NOTE_RST**
 
-**NOTE_B0**
+* **NOTE_B0**
 
-**NOTE_C1**, **NOTE_CS1**, **NOTE_D1**, **NOTE_DS1**, **NOTE_E1**. **NOTE_F1**, **NOTE_FS1**, **NOTE_G1**, **NOTE_GS1**, **NOTE_A1**, **NOTE_AS1**, **NOTE_B1**
+* **NOTE_C1**, **NOTE_CS1**, **NOTE_D1**, **NOTE_DS1**, **NOTE_E1**. **NOTE_F1**, **NOTE_FS1**, **NOTE_G1**, **NOTE_GS1**, **NOTE_A1**, **NOTE_AS1**, **NOTE_B1**
 
-**NOTE_C2**, **NOTE_CS2**, **NOTE_D2**, **NOTE_DS2**, **NOTE_E2**, **NOTE_F2**, **NOTE_FS2**, **NOTE_G2**, **NOTE_GS2**, **NOTE_A2**, **NOTE_AS2**, **NOTE_B2**
+* **NOTE_C2**, **NOTE_CS2**, **NOTE_D2**, **NOTE_DS2**, **NOTE_E2**, **NOTE_F2**, **NOTE_FS2**, **NOTE_G2**, **NOTE_GS2**, **NOTE_A2**, **NOTE_AS2**, **NOTE_B2**
 
-**NOTE_C3**, **NOTE_CS3**, **NOTE_D3**, **NOTE_DS3**, **NOTE_E3**, **NOTE_F3**, **NOTE_FS3**, **NOTE_G3**, **NOTE_GS3**, **NOTE_A3**, **NOTE_AS3**, **NOTE_B3**
+* **NOTE_C3**, **NOTE_CS3**, **NOTE_D3**, **NOTE_DS3**, **NOTE_E3**, **NOTE_F3**, **NOTE_FS3**, **NOTE_G3**, **NOTE_GS3**, **NOTE_A3**, **NOTE_AS3**, **NOTE_B3**
 
-**NOTE_C4**, **NOTE_CS4**, **NOTE_D4**, **NOTE_DS4**, **NOTE_E4**, **NOTE_F4**, **NOTE_FS4**, **NOTE_G4**, **NOTE_GS4**, **NOTE_A4**, **NOTE_AS4**, **NOTE_B4**
+* **NOTE_C4**, **NOTE_CS4**, **NOTE_D4**, **NOTE_DS4**, **NOTE_E4**, **NOTE_F4**, **NOTE_FS4**, **NOTE_G4**, **NOTE_GS4**, **NOTE_A4**, **NOTE_AS4**, **NOTE_B4**
 
-**NOTE_C5**, **NOTE_CS5**, **NOTE_D5**, **NOTE_DS5**, **NOTE_E5**, **NOTE_F5**, **NOTE_FS5**, **NOTE_G5**, **NOTE_GS5**, **NOTE_A5**, **NOTE_AS5**, **NOTE_B5**
+* **NOTE_C5**, **NOTE_CS5**, **NOTE_D5**, **NOTE_DS5**, **NOTE_E5**, **NOTE_F5**, **NOTE_FS5**, **NOTE_G5**, **NOTE_GS5**, **NOTE_A5**, **NOTE_AS5**, **NOTE_B5**
 
-**NOTE_C6**, **NOTE_CS6**, **NOTE_D6**, **NOTE_DS6**, **NOTE_E6**, **NOTE_F6**, **NOTE_FS6**, **NOTE_G6**, **NOTE_GS6**, **NOTE_A6**, **NOTE_AS6**, **NOTE_B6**
+* **NOTE_C6**, **NOTE_CS6**, **NOTE_D6**, **NOTE_DS6**, **NOTE_E6**, **NOTE_F6**, **NOTE_FS6**, **NOTE_G6**, **NOTE_GS6**, **NOTE_A6**, **NOTE_AS6**, **NOTE_B6**
 
-**NOTE_C7**, **NOTE_CS7**, **NOTE_D7**, **NOTE_DS7**, **NOTE_E7**, **NOTE_F7**, **NOTE_FS7**, **NOTE_G7**, **NOTE_GS7**, **NOTE_A7**, **NOTE_AS7**, **NOTE_B7**
+* **NOTE_C7**, **NOTE_CS7**, **NOTE_D7**, **NOTE_DS7**, **NOTE_E7**, **NOTE_F7**, **NOTE_FS7**, **NOTE_G7**, **NOTE_GS7**, **NOTE_A7**, **NOTE_AS7**, **NOTE_B7**
 
-**NOTE_C8**, **NOTE_CS8**, **NOTE_D8**, **NOTE_DS8**, **NOTE_E8**, **NOTE_F8**, **NOTE_FS8**, **NOTE_G8**, **NOTE_GS8**, **NOTE_A8**, **NOTE_AS8**, **NOTE_B8**
+* **NOTE_C8**, **NOTE_CS8**, **NOTE_D8**, **NOTE_DS8**, **NOTE_E8**, **NOTE_F8**, **NOTE_FS8**, **NOTE_G8**, **NOTE_GS8**, **NOTE_A8**, **NOTE_AS8**, **NOTE_B8**
