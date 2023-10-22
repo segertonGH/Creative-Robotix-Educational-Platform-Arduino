@@ -48,9 +48,9 @@ Initilises the Creative Robotix platform and configures the boards pins.
 * **hasStopped()** - Returns **true** if both wheels have stopped, **false** otherwise.
 	
 #### <ins>Behaviours</ins>
-* **lookAround(uint8_t speed, boolean state)** - Speed values between 0 and 5.  State **true** to acion the request.  State **false* to deactivate service, speed has no effect.
+* **lookAround(uint8_t speed, boolean state)** - Speed values between 0 and 5.  State **true** to acion the request.  State **false** to deactivate service, speed has no effect.
 
-* **swingArms(uint8_t speed, boolean state)** - Speed values between 0 and 5.  State **true** to acion the request.  State **false* to deactivate service, speed has no effect.
+* **swingArms(uint8_t speed, boolean state)** - Speed values between 0 and 5.  State **true** to acion the request.  State **false** to deactivate service, speed has no effect.
 
 #### <ins>Display</ins>
 * **displayScrollText(String text)** - Scroll text, upto 40 characters.  This method scolls text only once.  If continiously called, the same message will continue to scroll.
