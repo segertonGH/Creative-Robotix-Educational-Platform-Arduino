@@ -113,9 +113,9 @@ Initilises the Creative Robotix platform and configures the boards pins.
 * **btSetPin(uint16_t myRobotPin)** - Set the robots bluetooth pin.
 
 ### <ins>Variables</ins>
-* **auxInputs[]** - This Class variable decribes the state of the Auxiliary inputs as of the last **readAuxInputs** update.
+* **auxInputs[2]** - This class array decribes the state of the Auxiliary inputs as of the last **readAuxInputs** update.
 
-* **lineSensors[]** - This class arrary holds the state of the line sensors as of the last **readLine** update. lineSensors[0..4] where lineSensors[0] holds the boolean state of linesensor 1, and lineSensors[4] holds the boolean state of linesensor 5.
+* **lineSensors[5]** - This class arrary holds the state of the line sensors as of the last **readLine** update. lineSensors[0..4] where lineSensors[0] holds the boolean state of linesensor 1, and lineSensors[4] holds the boolean state of linesensor 5.
 
 * **linePosition** - This class variable decribes the relative position of codee on the line. = 6 when all line sensors are reflecting i.e. off the line, on a white reflective area, = 5 when all line sensors are not reflecting i.e. all on the line, or dark area, = 0 when Codee is on the line centre, < 0 when the robot is to the left of the line, > 0 when the robot is to the right of the line.
 
