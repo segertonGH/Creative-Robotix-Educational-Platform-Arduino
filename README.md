@@ -113,25 +113,35 @@ Initilises the Creative Robotix platform and configures the boards pins.
 * **btSetPin(uint16_t myRobotPin)** - Set the robots bluetooth pin.
 
 ### <ins>Variables</ins>
+* **auxInputs[]** - This Class variable decribes the state of the Auxiliary inputs as of the last **readAuxInputs** update.
+
 * **lineSensors[]** - This class arrary holds the state of the line sensors as of the last **readLine** update. lineSensors[0..4] where lineSensors[0] holds the boolean state of linesensor 1, and lineSensors[4] holds the boolean state of linesensor 5.
 
 * **linePosition** - This class variable decribes the relative position of codee on the line. = 6 when all line sensors are reflecting i.e. off the line, on a white reflective area, = 5 when all line sensors are not reflecting i.e. all on the line, or dark area, = 0 when Codee is on the line centre, < 0 when the robot is to the left of the line, > 0 when the robot is to the right of the line.
 
 * **lineState** - This class variable is updated by **readLine** and holds an integer between 0 and 10 with the following meaning when 5 line sensors are installed.
 
-&nbsp;&nbsp;&nbsp;&nbsp;0 Codee the the left, left, left, left of line
-&nbsp;&nbsp;&nbsp;&nbsp;1 Codee the the left, left, left of line
-&nbsp;&nbsp;&nbsp;&nbsp;2 Codee the the left, left of line
-&nbsp;&nbsp;&nbsp;&nbsp;3 Codee the the left of line
-&nbsp;&nbsp;&nbsp;&nbsp;4 Codee on line centre
-&nbsp;&nbsp;&nbsp;&nbsp;5 Codee the the right of line
-&nbsp;&nbsp;&nbsp;&nbsp;6 Codee the the right, right of line
-&nbsp;&nbsp;&nbsp;&nbsp;7 Codee the the right, right, right of line
-&nbsp;&nbsp;&nbsp;&nbsp;8 Codee the the right, right, right, right of line
-&nbsp;&nbsp;&nbsp;&nbsp;9 All sensors are not reflecting i.e. all sensors on the line
-&nbsp;&nbsp;&nbsp;&nbsp;10 All sensors are reflecting, i.e. all sensor off the line, on reflective area   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 Codee the the left, left, left, left of line
 
-* **auxInputs[]** - This Class variable decribes the state of the Auxiliary inputs as of the last **readAuxInputs** update.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 Codee the the left, left, left of line
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 Codee the the left, left of line
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 Codee the the left of line
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 Codee on line centre
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 Codee the the right of line
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6 Codee the the right, right of line
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7 Codee the the right, right, right of line
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8 Codee the the right, right, right, right of line
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9 All sensors are not reflecting i.e. all sensors on the line, or on non-reflective area
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 All sensors are reflecting, i.e. all sensor off the line, on a reflective area   
 
 ### <ins>Constants</ins>
 
