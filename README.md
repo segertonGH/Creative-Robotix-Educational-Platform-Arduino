@@ -32,7 +32,7 @@ Initilises the Creative Robotix platform and configures the boards pins.
 
 * **begin()** - Initilises display and says "Hello World!"
 
-* **update()** - This method is called to update the robots built in behaviours, swing arms, looks around, scroll text and audio.
+* **update()** - This method is called to update the robots built in behaviours, swing arms, look a around, scroll text and audio.
 
 #### <ins>Servos</ins>
 * **headAngle(int8_t angle, boolean state)** - Set head angle, 0 centre, positive values right, negative values left.  State **true** to action the request and keep servo active.  State **false** to deactivate servo, angle has no effect. 
@@ -121,23 +121,23 @@ Initilises the Creative Robotix platform and configures the boards pins.
 
 * **lineState** - This class variable is updated by **readLine** and holds an integer between 0 and 10 with the following meaning when 5 line sensors are installed.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 Codee the the left, left, left, left of line
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 Robot is left, left, left, left of line
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 Codee the the left, left, left of line
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 Robot is left, left, left of line
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 Codee the the left, left of line
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 Robot is left, left of line
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 Codee the the left of line
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 Robot is left of line
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 Codee on line centre
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 Robot on line centre
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 Codee the the right of line
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 Robot is right of line
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6 Codee the the right, right of line
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6 Robot is right, right of line
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7 Codee the the right, right, right of line
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7 Robot is right, right, right of line
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8 Codee the the right, right, right, right of line
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8 Robot is right, right, right, right of line
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9 All sensors are not reflecting i.e. all sensors on the line, or on non-reflective area
 
