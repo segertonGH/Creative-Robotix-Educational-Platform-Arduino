@@ -140,9 +140,9 @@ Initilises the Creative Robotix platform and configures the boards pins.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8 Robot is right, right, right, right of line
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9 All sensors are not reflecting i.e. all sensors on the line, or on non-reflective area
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9 All line sensors are not reflecting i.e. all sensors on the line, or on non-reflective area
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 All sensors are reflecting, i.e. all sensor off the line, on a reflective area   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 All line sensors are reflecting, i.e. all sensor off the line, on a reflective area   
 
 ### <ins>Constants</ins>
 
