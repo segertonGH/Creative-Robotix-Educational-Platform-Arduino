@@ -48,9 +48,9 @@ Initilises the Creative Robotix platform and configures the boards pins.
 * **hasStopped()** - Returns **true** if both wheels have stopped, **false** otherwise.
 	
 #### <ins>Behaviours</ins>
-* **lookAround(uint8_t speed, boolean state)** - this is a placeholder.
+* **lookAround(uint8_t speed, boolean state)** - Speed values between 0 and 5.  State **true** to acion the request.  State **false* to deactivate service, speed has no effect.
 
-* **swingArms(uint8_t speed, boolean state)** - this is a placeholder.
+* **swingArms(uint8_t speed, boolean state)** - Speed values between 0 and 5.  State **true** to acion the request.  State **false* to deactivate service, speed has no effect.
 
 #### <ins>Display</ins>
 * **displayScrollText(String text)** - Scroll text, upto 40 characters.  This method scolls text only once.  If continiously called, the same message will continue to scroll.
@@ -90,7 +90,7 @@ Initilises the Creative Robotix platform and configures the boards pins.
 * **hasMelodytoPlay()** - Returns **true** when a melody is playing.  Returns **false** when the melody has finished. 
 
 #### <ins>Ultrasound</ins>
-* **readUltrasound(void)** - Returns the current ultrasound reading in **cm**, maximum distance read 60cm.
+* **readUltrasound()** - Returns the current ultrasound reading in **cm**, maximum distance read 60cm.
 
 * **readUltrasoundMedian(uint8_t window)** - Returns median ultrasound reading in **cm**.  Windows specifies number of measurements.
 
@@ -113,13 +113,25 @@ Initilises the Creative Robotix platform and configures the boards pins.
 * **btSetPin(uint16_t myRobotPin)** - Set the robots bluetooth pin.
 
 ### <ins>Variables</ins>
-* **lineSensors** - this is a placeholder.
+* **lineSensors[]** - This class arrary holds the state of the line sensors as of the last **readLine** update. lineSensors[0..4] where lineSensors[0] holds the boolean state of linesensor 1, and lineSensors[4] holds the boolean state of linesensor 5.
 
-* **linePosition** - this is a placeholder.
+* **linePosition** - This class variable decribes the relative position of codee on the line. = 6 when all line sensors are reflecting i.e. off the line, on a white reflective area, = 5 when all line sensors are not reflecting i.e. all on the line, or dark area, = 0 when Codee is on the line centre, < 0 when the robot is to the left of the line, > 0 when the robot is to the right of the line.
 
-* **lineState** - this is a placeholder.
+* **lineState** - This class variable is updated by **readLine** and holds an integer between 0 and 10 with the following meaning when 5 line sensors are installed.
 
-* **auxInputs[]** - this is a placeholder.
+&nbsp;&nbsp;&nbsp;&nbsp;0 Codee the the left, left, left, left of line
+&nbsp;&nbsp;&nbsp;&nbsp;1 Codee the the left, left, left of line
+&nbsp;&nbsp;&nbsp;&nbsp;2 Codee the the left, left of line
+&nbsp;&nbsp;&nbsp;&nbsp;3 Codee the the left of line
+&nbsp;&nbsp;&nbsp;&nbsp;4 Codee on line centre
+&nbsp;&nbsp;&nbsp;&nbsp;5 Codee the the right of line
+&nbsp;&nbsp;&nbsp;&nbsp;6 Codee the the right, right of line
+&nbsp;&nbsp;&nbsp;&nbsp;7 Codee the the right, right, right of line
+&nbsp;&nbsp;&nbsp;&nbsp;8 Codee the the right, right, right, right of line
+&nbsp;&nbsp;&nbsp;&nbsp;9 All sensors are not reflecting i.e. all sensors on the line
+&nbsp;&nbsp;&nbsp;&nbsp;10 All sensors are reflecting, i.e. all sensor off the line, on reflective area   
+
+* **auxInputs[]** - This Class variable decribes the state of the Auxiliary inputs as of the last **readAuxInputs** update.
 
 ### <ins>Constants</ins>
 

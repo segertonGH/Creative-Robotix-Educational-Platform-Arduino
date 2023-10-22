@@ -5,7 +5,7 @@
  black line on white background. Ideally the line should be about 20mm wide, or 
  roughly double the distance between two sensors.  Codee uses the readline() 
  function to update the class variable linePostion.  This variable decribes the 
- relative position of code on the line.  See the line detection example for an 
+ relative position of codee on the line.  See the line detection example for an 
  explantion.
 
  linePosition = 6 when all line sensors are reflecting i.e. off the line, on white reflective area
