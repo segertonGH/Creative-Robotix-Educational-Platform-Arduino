@@ -3,7 +3,9 @@
 
  This example demonstrates how to set up Codees bluetooth. The configure function
  will set Codees bluetooth module name (myRobotname) and pin (myRobotPin) and set 
- the baud rate to 57600.
+ the baud rate to 57600.   given the name myRobotname and a pin myRobotPin, the baud 
+ rate is set to 57600.  The BT_Enable and BT_Configure jumpers need to be set and
+ the USB cable disconnected.  Codee should be powered from batteries.
 
  Created 18 October 2023
  by Simon Egerton
