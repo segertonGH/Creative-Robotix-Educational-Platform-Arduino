@@ -782,6 +782,17 @@ boolean CreativeRobotix::displayScrollText(String text) {
 	return(false);
 }
 
+boolean CreativeRobotix::displayScrollText(String text, boolean reset) {
+	if (text.length() < TEXT_TO_SCROLL_BUFFER_LEN) {
+		strcpy((char*)_textToScrollBuffer, text.c_str());
+		_textToScrollLen = text.length();
+		_isTextToScroll = true;
+		_updateTextToScroll(reset);
+		return(true);
+	}
+	return(false);
+}
+
 boolean CreativeRobotix::hasTextToScroll(void) {
 	return(_isTextToScroll);
 }

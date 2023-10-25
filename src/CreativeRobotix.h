@@ -50,7 +50,7 @@ https://github.com/wayoda/LedControl
 #define DISPLAY_CROSS				6	
 #define DISPLAY_ROCK				7
 #define DISPLAY_PAPER				8
-#define DISPLAY_SISSORS				9	
+#define DISPLAY_SCISSORS			9	
 #define DISPLAY_QUAVER				10
 #define DISPLAY_QUAVERx2			11
 #define DISPLAY_HEART				12
@@ -184,6 +184,7 @@ public:
 	// LED Display
 
 	boolean displayScrollText(String text);
+	boolean displayScrollText(String text, boolean reset);
 	boolean displayImage(uint8_t image);
 	boolean displayDigits(uint8_t number);
 	boolean displayASCII(uint8_t ascii);
