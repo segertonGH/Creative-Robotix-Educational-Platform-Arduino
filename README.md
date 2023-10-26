@@ -21,7 +21,7 @@ This library has two library dependencies [LEDControl](https://www.arduino.cc/re
 
 ### Working with the examples
 
-Libary examples can be found from the Arduino IDE File -> Examples -> CreativeRobotix.  To compile the library examples for the Arduino Creative Robotix platform select Tools -> Board -> Arduino AVR Boards -> Arduino Nano.  The Arduino Nano has two bootloder varients these can be found from Tools -> Processor.  Select the "ATmega 328P(old Booloader).  If the upload is not successful, then try the "ATmega 328P" processor.  If neither processors are successful then check the Bluetooth Enable jummper and ensure that it it removed.  If the jumper is removed, then check that the NewPing.h file has been successfully updated.
+Libary examples can be found from the Arduino IDE, goto File -> Examples -> CreativeRobotix.  To compile the library examples for the Arduino Creative Robotix platform select Tools -> Board -> Arduino AVR Boards -> Arduino Nano.  The Arduino Nano has two bootloder varients these can be found from Tools -> Processor.  Select the "ATmega 328P(old Booloader).  If uploads are not successful with this process option selected, then try the "ATmega 328P" processor option.  If neither processor options result in a successul upload then check that the Bluetooth Transmit Enable jummper is removed.  If the jumper is removed, then check that the NewPing.h file has been successfully updated.
 
 ### Constructor
 
