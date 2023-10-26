@@ -146,7 +146,7 @@ Initilises the Creative Robotix platform and configures the boards pins.
 
 ### <ins>Constants</ins>
 
-Dipslay constants refernces the number of LED in the display height and width
+Display constants reference the number of LEDs in the display height and width
 
 * **DISPLAY_HEIGHT**, **DISPLAY_WIDTH**
 
@@ -154,7 +154,7 @@ Built in images for use with the **diaplayImage** method
 
 * **DISPLAY_SMILE**, **DISPLAY_NEUTRAL**, **DISPLAY_FROWN**, **DISPLAY_QUESTION**, **DISPLAY_OK**, **DISPLAY_TICK**, **DISPLAY_CROSS**, **DISPLAY_ROCK**, **DISPLAY_PAPER**, **DISPLAY_SISSORS**, **DISPLAY_QUAVER**, **DISPLAY_QUAVERx2**, **DISPLAY_HEART**, **DISPLAY_BLANK**
 
-Built in Melodies for use with the **playMelody** method 
+Built in melodies for use with the **playMelody** method 
 
 * **MELODY_GREENSLEEVES**, **MELODY_LITTLELAMB**, **MELODY_HAPPYBIRTHDAY**, **MELODY_STARWARS**, **MELODY_CHARIOTS**
 
