@@ -14,7 +14,7 @@ Creative-Robotix can be used by teachers, parents, children, adults, in groups o
 ## Install 
 The library can be installed using the [standard Arduino library install procedure](https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-installing-a-library) and is availble from the Arduino library manager.
 
-This library has two library dependencies [LEDControl](https://www.arduino.cc/reference/en/libraries/ledcontrol/) and [NewPing](https://www.arduino.cc/reference/en/libraries/newping/).  Accept their installation when asked by the Arduino IDE.  The Creative Robotix library makes use the arduino tone function which creates a timmer conflict with the NewPing library.  To resolve this conflict, open NewPing.h and change all instances of " TIMER_ENABLED true" to " TIMER_ENABLED false" before saving.  The NewPing.h file can be found in the [arduino library folder](https://docs.arduino.cc/hacking/software/Libraries).
+This library has two library dependencies [LEDControl](https://www.arduino.cc/reference/en/libraries/ledcontrol/) and [NewPing](https://www.arduino.cc/reference/en/libraries/newping/).  Accept their installation when asked by the Arduino IDE.  The Creative Robotix library makes use of the arduino tone function which creates a conflict with the NewPing library.  To resolve this conflict, open NewPing.h and change all instances of "TIMER_ENABLED true" to "TIMER_ENABLED false" before saving.  The NewPing.h file can be found in the [arduino library folder](https://docs.arduino.cc/hacking/software/Libraries).  On windows machines the Arduino libary folder is typically found in "Documents/Arduino/" and from there NewPing.h will be found in the "libraries/NewPing/src" folder.
 
 ## Documentation
 
