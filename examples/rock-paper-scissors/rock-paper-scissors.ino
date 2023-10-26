@@ -21,9 +21,10 @@
 #include "CreativeRobotix.h"
 
 // game constants
-#define GAME_TRIES	3
-#define GAME_TIME	5000  // time in ms for each game
-#define GAME_DELAY	1000
+#define GAME_TRIES		3
+#define GAME_TIME		5000  // time in ms for each game 
+#define GAME_COUNTDOWN	1000 
+#define GAME_DELAY		1000
 
 #define	START_US	5
 
@@ -104,7 +105,7 @@ void gameOver() {
 		codee.swingArms(2, true);
 		codee.playMelody(MELODY_STARWARS);
 	}
-	else if (playerScore > codeeScore) {
+	else if (playerScore < codeeScore) {
 		codee.displayScrollText("I WIN! ", true);
 		codee.swingArms(2, true);
 		codee.playMelody(MELODY_CHARIOTS);
@@ -120,7 +121,7 @@ void gameOver() {
 	l_previousMillis = l_currentMillis;
 
 	// while game time hasn't expired, update codees behaviours
-	while ((l_currentMillis - l_previousMillis) < GAME_TIME * 2) {
+	while ((l_currentMillis - l_previousMillis) < GAME_TIME * 3) {
 		// update Codee
 		codee.update();
 
@@ -176,7 +177,15 @@ uint8_t getPlayerInput(void) {
 
 	// while game time hasn't expired
 	while ((l_currentMillis - l_previousMillis) < GAME_TIME){
-		 ultrasound = codee.readUltrasound();
+
+		// update codee
+		codee.update();
+
+		// update countdown tone
+		countDownTone();
+
+		// get player inpuet and process
+		ultrasound = codee.readUltrasound();
 
 		if (ultrasound < ROCK_US) {
 			codee.displayImage(DISPLAY_ROCK);
@@ -189,10 +198,35 @@ uint8_t getPlayerInput(void) {
 			playerInput = 2;
 		}
 
+		// update current time
 		l_currentMillis = millis();
 	}
 
 	return(playerInput);
+}
+
+void countDownTone(void) {
+	// create local timmer variables
+	static unsigned long l_currentMillis;
+	static unsigned long l_previousMillis = 0;
+
+	// use counts to increase tone each itteration
+	static uint8_t count = 0;
+
+	// set the times
+	l_currentMillis = millis();
+
+	if ((l_currentMillis - l_previousMillis) > GAME_COUNTDOWN) {
+
+		// save the last time we played a tone
+		l_previousMillis = l_currentMillis;
+		
+		// play a tone 
+		codee.playTone(NOTE_C6 + (count * 300), 100);
+
+		// update count, rolls over to 0 on last tone
+		count = (count + 1) % (GAME_TIME / GAME_COUNTDOWN);
+	}
 }
 
 void displayChoices() {
