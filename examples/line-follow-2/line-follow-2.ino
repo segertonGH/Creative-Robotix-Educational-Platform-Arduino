@@ -2,11 +2,10 @@
  Creative Robotix: line following
 
  This example demostrates a basic line following method.  This example assumes a 
- black line on white background. Ideally the line should be about 20mm wide, or 
- roughly double the distance between two sensors.  Codee uses the readline() 
- function to update the class variable linePostion.  This variable decribes the 
- relative position of codee on the line.  See the line detection example for an 
- explantion.
+ black line on white background. Ideally the line should be about 15mm wide, or roughly the half 
+ the distance between two sensors.  Codee uses the readline() function to update the class 
+ variable linePostion.  This variable decribes the relative position of codee on the line.  See 
+ the line detection example for an explantion.
 
  linePosition = 6 when all line sensors are reflecting i.e. off the line, on white reflective area
  linePosition = 5 when all line sensors are not reflecting i.e. on the line, on dark area
@@ -17,11 +16,15 @@
  Created 18 October 2023
  by Simon Egerton
 
+ Creative Robotix
+
+ http://creativerobotix.com.au
+
  Creative Science Foundation
 
- https://creative-science.org/
+ http://creative-science.org/
 
- https://creative-science.org/partnerships/creative-robotix/
+ http://creative-science.org/partnerships/creative-robotix/
 
  */
 

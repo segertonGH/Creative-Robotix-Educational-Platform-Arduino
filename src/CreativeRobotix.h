@@ -3,21 +3,31 @@
  Created:	7/10/2023 4:25:23 PM
  Author:	Simon Egerton
 
-Creative Science Foundation Creative Robotix Platform.
+ Creative Robotix Platform Arduino Library.
 
-Last updated October 18th, 2023
+ Last updated October 18th, 2023
 
-Compile Notes:
+ Compile Notes:
 
-Additional libraies required for compile
+ Additional libraies required for compile
 
-http://playground.arduino.cc/Code/NewPing
+ http://playground.arduino.cc/Code/NewPing
 
-New Ping conflicts with the Tone functions, edit the NewPing.h file
-and set the TIMMER_ENABLED setting to 'false'.  The header file can
-be found under the 'Arduino/libraries/NewPing' folder.
+ New Ping conflicts with the Tone functions, edit the NewPing.h file
+ and set the TIMMER_ENABLED setting to 'false'.  The header file can
+ be found under the 'Arduino/libraries/NewPing' folder.
 
-https://github.com/wayoda/LedControl
+ https://github.com/wayoda/LedControl
+
+ Creative Robotix
+
+ http://creativerobotix.com.au
+
+ Creative Science Foundation
+
+ http://creative-science.org/
+
+ http://creative-science.org/partnerships/creative-robotix/
 
 */
 

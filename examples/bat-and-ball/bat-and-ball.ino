@@ -1,20 +1,24 @@
 /*
  Creative Robotix: bat and ball
 
- This example plays the game of bat and ball.  The player controls the bat using
- their hand and Codees ultrasound sensor.  The game ends when either the player
-reaches the winning score as defined by WINNING_SCORE.  Change GAME_DELAY to 
-increase the speed of the ball, and the difficult of the game play, default
-value is 250
+ This example plays the game of bat and ball.  The player controls by variing the distance 
+ of their hand in front of Codees ultrasound sensor.  The game ends when the player reaches 
+ the winning score as defined by WINNING_SCORE (this is equal to the number of time the bat hits 
+ the ball in a row), or until the player misses the ball.  Change GAME_DELAY to increase the 
+ the difficult of the game play, the default value is 250.
 
  Created 15 October 2023
  by Simon Egerton
 
+ Creative Robotix 
+
+ http://creativerobotix.com.au
+
  Creative Science Foundation
 
- https://creative-science.org/
+ http://creative-science.org/
 
- https://creative-science.org/partnerships/creative-robotix/
+ http://creative-science.org/partnerships/creative-robotix/
 
  */
 

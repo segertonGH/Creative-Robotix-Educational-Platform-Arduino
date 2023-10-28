@@ -1,17 +1,21 @@
 /*
  Creative Robotix: ultrasound 
 
- This example uses Codees display to reort the ultrasound sensor range reading and
+ This example uses Codees display to report the ultrasound sensor range reading and
  play a tone proportional to the range, higher tone = nearer, lower tone = further 
 
  Created 13 October 2023
  by Simon Egerton
 
+ Creative Robotix
+
+ http://creativerobotix.com.au
+
  Creative Science Foundation
 
- https://creative-science.org/
+ http://creative-science.org/
 
- https://creative-science.org/partnerships/creative-robotix/
+ http://creative-science.org/partnerships/creative-robotix/
 
  */
 

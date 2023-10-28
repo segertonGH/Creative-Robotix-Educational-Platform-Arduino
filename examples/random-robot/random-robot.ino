@@ -1,23 +1,30 @@
 /*
- Creative Robotix: randoms
+ Creative Robotix: random robot
 
  This example demostrates how to generate psuedo random numbers which vary each
- cycle.  Two random numbers are generates for the high & low protions of the
- display then displayed to screen.  Thi sexample is based on the idea from Michael
- James @ https://www.programmingelectronics.com/using-random-numbers-with-arduino/.
- This technique is useful for navigation and games, and is demostrated further by
- some of the other library examples.
+ cycle.  The random numbers are used to set Codees screen display.  Codees screen is 64 bits 
+ wide (i.e. 8 pixels by 8 pixels).  Two random numbers are generated for the high (top 32 bits) & 
+ low (bottom 32 bits) of the screen then sent to display.  This example genertes random numbers 
+ based on the idea from Michael James @ https://www.programmingelectronics.com/using-random-numbers-with-arduino/.
+ This technique uses a floating analoge pin to seed the random number generator.  Generating random 
+ number is useful to navigation, games, and is demostrated further by some of the other library 
+ examples.
 
- This example uses the A7 analoge pin reserved for Codees Bluetooth config.
+ This example uses the A7 analoge pin reserved for Codees Bluetooth config to seed the random 
+ number generator.
 
  Created 14 October 2023
  by Simon Egerton
 
+ Creative Robotix
+
+ http://creativerobotix.com.au
+
  Creative Science Foundation
 
- https://creative-science.org/
+ http://creative-science.org/
 
- https://creative-science.org/partnerships/creative-robotix/
+ http://creative-science.org/partnerships/creative-robotix/
 
  */
 
@@ -57,13 +64,17 @@ void loop() {
 
 	if ((l_currentMillis - l_previousMillis) > INTERVAL) {
 		// generate random display data.  RANDOM_MAX is half the required 
-		// random value, so let's multiply the value by another random number 
+		// random value i.e. 31 bits, so let's multiply the value by another 
+		// random number to ensure at least 32 bits are generated 
 		randomDisplayHigh = random(0, RANDOM_MAX) * random(2, 10);
 		randomDisplayLow = random(0, RANDOM_MAX) * random(2, 10);
 
-		// display results on Codee
-		screen = randomDisplayHigh;
+		// assembly the screen data, starting with loading the top half of the data to display
+		screen = randomDisplayHigh; 
+		// shift the screen data right 32 bits, and load in the bottom half of the data to display
 		screen = (screen << 32) | randomDisplayLow;
+		
+		// display results on Codee
 		codee.displayCustom(screen);
 
 		// play tone

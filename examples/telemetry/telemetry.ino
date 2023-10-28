@@ -1,10 +1,10 @@
 /*
  Creative Robotix: telemetry
 
- This example demostrates the use of Codees Bluetooth modeule to tarnsmit sensor
+ This example demostrates the use of Codees Bluetooth module to tarnsmit sensor
  data back to the the connected host computer.  The data can be printed from
  the Arduino serial port terminal, graphed, dashbored, or used to inform Codee
- what to do next, by sending messages back to Codee via Bluetooth.  See BT_Server
+ what to do by sending messages back to Codee via Bluetooth.  See bluetooth-server
  example.
 
  1. ensure the Bluetooth module has been configured, see the setup example
@@ -12,23 +12,27 @@
  3. upload this example via USB cable
  4. remove USB cable
  5. install batteries, connect to Codee via Bluetooth
- 6. If needed, add new bluetooth device, adding the robot name
+ 6. if needed, add new bluetooth device, looking for your robots name (if different from the default 'codee')
  7. open the arduino serial port at the correct serial port number 
 
  Note: this example only transmits data over serial, and so the Bluetooth Receive jumper 
  is not required.  If you wish to send data back to Codee from your computer, then the 
- Bluetooth Receive jumper needs to be set.  Note, when the Bluetooth jumper is set, then 
- you will not be able to upload new example via teh USB cable, and you will need to remove 
- the jumper.
+ Bluetooth Receive jumper needs to be set.  However, when the Bluetooth jumper is set, you 
+ will not be able to upload new examples via the USB cable, and you will need to remove 
+ the jumper again to do so.
 
  Created 23 October 2023
  by Simon Egerton
 
+ Creative Robotix
+
+ http://creativerobotix.com.au
+
  Creative Science Foundation
 
- https://creative-science.org/
+ http://creative-science.org/
 
- https://creative-science.org/partnerships/creative-robotix/
+ http://creative-science.org/partnerships/creative-robotix/
 
  */
 

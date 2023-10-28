@@ -1,40 +1,44 @@
 /*
- Creative Robotix: rock paper scissor game 
+ Creative Robotix: rock paper scissors game 
 
- This example plays the game of rock, paper, scissors.  Codee will challenge you
- to play the best of three, playing a victory tune for a win, along with
- some scoll text.  The player chooses betwen, Rock, Paper, Sissors by holding a hand
- steady in front of Codee with a defined window.  This example contains a game may
- that can be printed on A3 paper to help enhance the expereince.
+ This example plays the game of rock, paper, scissors.  Codee will challenge you to play the 
+ best of three games, playing a victory tune for a win, along with scoll text.  The player 
+ chooses betwen, Rock, Paper, Sissors by holding a hand steady in front of Codee within a 
+ defined window.  This example contains a game matt in the examples folder to enhance the 
+ playability.  The matt is best printed on A3 paper.
  
  Created 24 October 2023
  by Simon Egerton
 
+ Creative Robotix
+
+ http://creativerobotix.com.au
+
  Creative Science Foundation
 
- https://creative-science.org/
+ http://creative-science.org/
 
- https://creative-science.org/partnerships/creative-robotix/
+ http://creative-science.org/partnerships/creative-robotix/
 
  */
 
 #include "CreativeRobotix.h"
 
 // game constants
-#define GAME_TRIES		3
-#define GAME_TIME		5000  // time in ms for each game 
-#define GAME_COUNTDOWN	1000 
-#define GAME_DELAY		1000
+#define GAME_TRIES		3		// best out of 3
+#define GAME_TIME		5000	// time in ms for each game 
+#define GAME_COUNTDOWN	1000	// should value should divide GAME_TIME exactly 
+#define GAME_DELAY		1000	// value of game pauses in ms
 
-#define	START_US	5
+#define	START_US		5		// minimum distance to hi-five code to start game 			
 
-#define ROCK_US		8
-#define PAPER_US	16
-#define SCISSORS_US	25
+#define ROCK_US			8		// distance thresholds in cm for rock, paper, scissors
+#define PAPER_US		16
+#define SCISSORS_US		25
 
-#define DISPLAY_PLAYER 0x0005f507f5050000
-#define DISPLAY_CODEE 0x0007f101f1070000
-#define DISPLAY_SCORE 0x000007f407f10700
+#define DISPLAY_PLAYER	0x0005f507f5050000 // H = 
+#define DISPLAY_CODEE	0x0007f101f1070000 // C =  
+#define DISPLAY_SCORE	0x000007f407f10700 // S = 
 
 // game choice array
 uint8_t gameChoice[] = {DISPLAY_ROCK, DISPLAY_PAPER, DISPLAY_SCISSORS};

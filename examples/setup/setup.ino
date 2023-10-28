@@ -3,23 +3,26 @@
 
  This example centres Codees head, arms, and programes Codees bluetooth module.
  The bluetooth module is given the name myRobotname and a pin myRobotPin, the baud 
- rate is set to 57600.  The BT_Enable and BT_Configure jumpers need to be set and
+ rate is set to 57600.  The BT_Receive_Enable and BT_Configure jumpers both need to be set and
  the USB cable disconnected.  Codee should be powered from batteries.
 
- If Codees head and arms are not centred, then remove the servo screw holding 
- them in place and reposition while the servos are activted to their center spots.
+ If Codees head and arms are not centred, then remove the servo screws holding 
+ them in place and reposition while the servos are activated to their center points.
 
- NOTE: Codees forearm should be horizontal, parallel to the desktop, in the centre
- position.
+ NOTE: Codees forearms are at their centre position when they are parallel to the desktop.
 
  Created 23 October 2023
  by Simon Egerton
 
+ Creative Robotix
+
+ http://creativerobotix.com.au
+
  Creative Science Foundation
 
- https://creative-science.org/
+ http://creative-science.org/
 
- https://creative-science.org/partnerships/creative-robotix/
+ http://creative-science.org/partnerships/creative-robotix/
 
  */
 

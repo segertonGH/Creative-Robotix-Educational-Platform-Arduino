@@ -5,8 +5,8 @@
  built in melodies.  Melodies are selected by holding an object in front
  of codee at the trigger distance for a period of at least 5 seconds.  Codee
  will then play the melody.  Wait for codee to stop playing before selecting
- the next melody.  Codees display a message for user input and is used to 
- indicate the melody being slected.
+ the next melody.  Codee displays the first letter of the melody to indicate the 
+ melody being slected.
 
 Distance bands for tune selection:
 
@@ -14,16 +14,20 @@ GREENSLEEVES		5cm - 10cm
 LITTLELAMB			15cm - 20cm
 HAPPYBIRTHDAY		25cm - 30cm
 STARWARS			35cm - 40cm
-MELODY_CHARIOTS		45cm - 50cm
+CHARIOTS			45cm - 50cm
  
  Created 12 October 2023
  by Simon Egerton
  
+ Creative Robotix
+
+ http://creativerobotix.com.au
+
  Creative Science Foundation
 
- https://creative-science.org/
+ http://creative-science.org/
 
- https://creative-science.org/partnerships/creative-robotix/
+ http://creative-science.org/partnerships/creative-robotix/
  
  */
 
