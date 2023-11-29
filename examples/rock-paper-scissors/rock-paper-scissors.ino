@@ -133,7 +133,7 @@ void gameOver() {
 		l_currentMillis = millis();
 	}
 
-	// reset positure
+	// reset posture
 	resetPosture();
 }
 

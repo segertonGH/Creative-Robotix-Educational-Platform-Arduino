@@ -34,6 +34,8 @@
 #include "CreativeRobotix.h"
 #include <Arduino.h>
 
+// Demo
+#define PIN_DEMO				12
 
 // Auxilary analoge inputs
 
@@ -387,6 +389,10 @@ const int LED_DISPLAY_CHARACTERS_LEN = sizeof(LED_DISPLAY_CHARACTERS) / sizeof(u
 
 // constructor 
 CreativeRobotix::CreativeRobotix() {
+
+	// set up DEMO pin
+
+	pinMode(PIN_DEMO, INPUT_PULLUP);
 
 	// set up AUX and LINE inputs
 
@@ -1247,4 +1253,12 @@ void CreativeRobotix::btSetPin(uint16_t myRobotPin) {
 	{
 		sayDirect("{}{}{}{}{}{}{}{}{}"); // Signal Error
 	}
+}
+
+boolean CreativeRobotix::demo(void) {
+	// demo pin is enabled with pull_up 
+	if (digitalRead(PIN_DEMO) == HIGH) {
+		return (false);
+	}
+	return(true);
 }

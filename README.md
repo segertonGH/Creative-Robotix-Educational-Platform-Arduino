@@ -179,3 +179,7 @@ Note definitions for use with **playTone** and **playMelody** methods.  Eight oc
 * **NOTE_C7**, **NOTE_CS7**, **NOTE_D7**, **NOTE_DS7**, **NOTE_E7**, **NOTE_F7**, **NOTE_FS7**, **NOTE_G7**, **NOTE_GS7**, **NOTE_A7**, **NOTE_AS7**, **NOTE_B7**
 
 * **NOTE_C8**, **NOTE_CS8**, **NOTE_D8**, **NOTE_DS8**, **NOTE_E8**, **NOTE_F8**, **NOTE_FS8**, **NOTE_G8**, **NOTE_GS8**, **NOTE_A8**, **NOTE_AS8**, **NOTE_B8**
+
+### <ins>Firmata</ins>
+
+The library provides an example Firmata server.  The example is a full server and has been tested with [Snap4Arduino](https://snap4arduino.rocks/).  A Python [client package](https://pypi.org/project/codeepy/) is also available and can be installed via "pip install codeepy"

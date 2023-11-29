@@ -45,7 +45,7 @@
 
 #include "CreativeRobotix.h"
 
-// state array maps to -> [LLLL, LLL, LL, L, CENTRE, R, RR, RRR, RRRR, ALL ON, ALL OFF]
+// state array maps to -> [VVVL, VVL, VL, L, CENTRE, R, VR, VVR, VVVR, ALL ON, ALL OFF]
 // line following states
 int8_t lf_state_leftw[] = {	 9,	9,	9,	9,	9,	0,	0,	0,	0,	0,	0 };
 int8_t lf_state_rightw[] = { 0,	0,	0,	0,	6,	6,	6,	6,	6,	0,	0 };

@@ -61,6 +61,11 @@ void setup() {
 
 	// clear display
 	codee.displayClear();
+
+	// set codee pose
+	codee.headAngle(0, true);
+	codee.armLeft(0, true);
+	codee.armRight(0, true);
 }
 
 // the loop function runs over and over again until power down or reset
@@ -91,9 +96,9 @@ void loop() {
 	}
 	else // trigger a new game after playing players victory tune (if max score of 99 achived)
 	{
-		// check no melody is playing first to avoid delaying codee.update with ultrasound read
+		// check no melody is playing first to avoid delaying codee. update with ultrasound reading
 		if (!codee.hasMelodytoPlay()) {
-			if (codee.readUltrasoundMedian(3) == bat_positions[3]) {
+			if (codee.readUltrasoundMedian(3) == bat_positions[0]) { // Hi five codee to play! 
 				// reset codee
 				codee.displayReset();
 				codee.displayClear();

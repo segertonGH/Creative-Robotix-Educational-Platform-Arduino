@@ -241,6 +241,9 @@ public:
 	void btSetName(String myRobotName);
 	void btSetPin(uint16_t myRobotPin);
 
+	// Demo pin set
+	boolean demo(void);
+
 private:
 
 	// Line Sensors
