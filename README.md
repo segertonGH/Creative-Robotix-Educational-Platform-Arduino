@@ -56,6 +56,8 @@ Initilises the Creative Robotix platform and configures the boards pins.
 #### <ins>Display</ins>
 * **displayScrollText(String text)** - Scroll text, upto 40 characters.  This method scolls text only once.  If continiously called, the same message will continue to scroll.
 
+* **displayScrollTextReset()** - Resets the scroll text to start at the first charecter.  This is useful when updating the scoll text.  Preceeding the new scroll text with this reset will start the new scroll text at the start of the new text.
+
 * **displayImage(uint8_t image)** - Display one of the built in images, see display constants below.
 
 * **displayDigits(uint8_t number)** - Display a digit between 0 and 99
@@ -105,6 +107,9 @@ Initilises the Creative Robotix platform and configures the boards pins.
 
 #### <ins>Battery</ins>
 * **readBatteryVoltage()** - Returns battery volatage as an integer.  Divide return by 10 for actual voltage i.e. a return value of 47 means a voltage reading of 4.7 volts.
+
+#### <ins>Demo</ins>
+* **demo()** - Return true if the demo jumper is set and false otherwise.
 
 #### <ins>Bluetooth</ins>
 * **btConfigure(String myRobotName, uint16_t myRobotPin)** - Configure the Creative Robotix bluetooth module for 57600 baud and set the bluetooth myRobotname and pin.
