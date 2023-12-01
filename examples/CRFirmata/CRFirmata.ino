@@ -14,6 +14,12 @@
  
  https://github.com/firmata/arduino#firmata-client-libraries
 
+ This Firmata Server has been tested with Snap4Arduino https://snap4arduino.rocks/
+ and the CodeePy python package https://pypi.org/project/codeepy/.  The CRFirmata 
+ examples folder provides the snap4Ardunino black for import.  These blocks should
+ by part of Snap4Arduino package from versions greater than 8.2.4 and will be 
+ removed from this library when that happens.
+
  NOTE: The bluetooth module is given the name set by MY_ROBOTS_NAME and a pin
  set by MY_ROBOTS_PIN, the baud rate is set to 57600, which is the Firmata defualt.
  To have these values update the bluetooth moduel on boot the BT_Receive_Enable 
