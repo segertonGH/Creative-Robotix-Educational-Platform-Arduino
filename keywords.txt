@@ -24,6 +24,7 @@ hasStopped	KEYWORD2
 lookAround	KEYWORD2
 swingArms	KEYWORD2
 displayScrollText	KEYWORD2
+displayScrollTextReset	KEYWORD2
 displayImage	KEYWORD2
 displayDigits	KEYWORD2
 displayASCII	KEYWORD2
@@ -46,6 +47,7 @@ readLineSensors	KEYWORD2
 readLine	KEYWORD2
 readAuxInputs	KEYWORD2
 readBatteryVoltage	KEYWORD2
+demo	KEYWORD2
 btConfigure	KEYWORD2
 btSetName	KEYWORD2
 btSetPin	KEYWORD2
