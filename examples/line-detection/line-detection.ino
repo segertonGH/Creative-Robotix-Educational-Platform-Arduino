@@ -99,12 +99,12 @@ void reportLinePosition(void){
 	codee.displayDigits(linePosition);
 
 	// add decimal point
-	codee.displayPixel(3, 1, true);
+	codee.displayPixel(1, 3, true);
 
 	// display the negative sign
 	if (codee.linePosition < 0) {
-		codee.displayPixel(7, 0, true);
-		codee.displayPixel(6, 0, true);
+		codee.displayPixel(0, 7, true);
+		codee.displayPixel(0, 6, true);
 	}
 }
 

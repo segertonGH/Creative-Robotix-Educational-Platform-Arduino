@@ -4,11 +4,12 @@
  This example demonstrates how to set up Codees bluetooth. The configure function
  will set Codees bluetooth module name (myRobotname) and pin (myRobotPin) and configure 
  the baud rate to 57600.  The BT_Recive_Enable and BT_Configure jumpers need to be set and
- the USB cable disconnected.  Upload the firmware via USB, set the jumpers, unplug the USB cable, 
- then powere Codee up from batteries.  Codee will emit a series of chirps when powered up.  If
- Bluetooth configuration is successful, the Codee will display a smile and say hello.  If 
- Bluetooth configuration hasn't been successful, then a series of 'harsh' continous tones will 
- sound, and Codee's display will remain blank.
+ the USB cable disconnected.  Upload the firmware via USB, then set the BT jumpers, unplug 
+ the USB cable, poweer Codee from batteries.  Codee will emit a series of chirps when 
+ powered up.  If the bluetooth configuration update is successful, then Codee will display 
+ a smile and say hello.  If the bluetooth configuration upadate hasn't been successful, then 
+ a series of 'harsh' continous tones will sound, and Codee's display will remain blank. In 
+ this case, check the USB cable has been removed and the BT_Receive_Enable jumper is set.
 
  Created 18 October 2023
  by Simon Egerton

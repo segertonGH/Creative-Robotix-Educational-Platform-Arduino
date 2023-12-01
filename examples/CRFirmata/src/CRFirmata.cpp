@@ -25,7 +25,7 @@
 
  Creative Science Foundation Creative Robotix Platform Modifications.
 
- Last updated November 29th, 2023
+ Last updated December 2nd, 2023
 
  Simon Egerton
 
@@ -697,9 +697,9 @@ void sysexCallback(byte command, byte argc, byte* argv)
 				Firmata.write((byte)OUTPUT);
 				Firmata.write(1);
 				//////////////////////////////////////////////////
-				//CRE2 version 1. Marking digital pins:  pin 3 = CRE && support SHIFT = version 1 
+				//CRE2 version 2. Marking digital pins:  pin 3 = CRE && support SHIFT = version 1 
 				if (pin == 3) {
-					Firmata.write((byte)0x05); //this is I2C mode in Firmata defintition (https://github.com/firmata/protocol/blob/master/protocol.md)
+					Firmata.write((byte)0x06); //this is I2C mode in Firmata defintition (https://github.com/firmata/protocol/blob/master/protocol.md)
 					Firmata.write(1);
 				}
 				//////////////////////////////////////////////////
@@ -782,7 +782,6 @@ void sysexCallback(byte command, byte argc, byte* argv)
 			for (i; (i < argc) && (i < TEXT_TO_SAY_BUFFER_LEN); i++) { // Stay silent if text is longer than buffer
 				text.concat((char)argv[i]);
 			}
-			codee.displayDigits(argc);
 			codee.say(text);
 		}
 		break;
@@ -838,7 +837,8 @@ void sysexCallback(byte command, byte argc, byte* argv)
 				for (uint8_t i = 2; (i < argc) && (i < TEXT_TO_SCROLL_BUFFER_LEN); i++) { // Stay silent if text is longer than buffer
 					text.concat((char)argv[i]);
 				}
-				codee.displayScrollText(text);
+				// and reset the scroll 
+				codee.displayScrollText(text); 
 			}
 			else {
 				codee.displayReset();
@@ -847,6 +847,9 @@ void sysexCallback(byte command, byte argc, byte* argv)
 		break;
 		case LED_SET_NUMBER:
 			codee.displayDigits(argv[1]);
+			break;
+		case LED_SET_ASCII:
+			codee.displayASCII(argv[1]);
 			break;
 		case LED_SET_ROW_DATA:
 		{
@@ -864,6 +867,9 @@ void sysexCallback(byte command, byte argc, byte* argv)
 			break;
 		case LED_SET_CLEAR:
 			codee.displayClear();
+			break;
+		case LED_RST_SCROLL_TEXT:
+			codee.displayScrollTextReset();
 			break;
 		}
 		break;
@@ -933,11 +939,13 @@ void sysexCallback(byte command, byte argc, byte* argv)
 			break;
 		case SERVO_WHEEL_RIGHT:
 			codee.wheelRight(90 - argv[1]);
+			break;
 		case SERVO_WHEEL_STOP:
 			codee.wheelLeft(0);
 			codee.wheelRight(0);
+			break;
 		case SERVO_ARM_LEFT:
-			codee.armLeft(90 - argv[1], true);
+			codee.armLeft(argv[1] - 90, true);
 			break;
 		case SERVO_ARM_RIGHT:
 			codee.armRight(argv[1] - 90, true);

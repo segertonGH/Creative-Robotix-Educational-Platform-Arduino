@@ -193,6 +193,7 @@ public:
 
 	// LED Display
 
+	void displayScrollTextReset(void);
 	boolean displayScrollText(String text);
 	boolean displayScrollText(String text, boolean reset);
 	boolean displayImage(uint8_t image);
@@ -334,6 +335,7 @@ private:
 	void _updateArmsSwing(void);
 	uint32_t _readVcc(void);
 	uint64_t _shiftScreenLeft(uint64_t screen);
+	int8_t _boundWheelVelocity(int8_t velocity);
 };
 
 #endif

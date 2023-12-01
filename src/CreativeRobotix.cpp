@@ -54,6 +54,7 @@
 
 #define PIN_LEFT_WHEEL_SERVO	2
 #define PIN_RIGHT_WHEEL_SERVO	3
+#define WHEEL_SPEED_MAX			30
 
 #define VELOCITY_LEFT			0
 #define VELOCITY_RIGHT			1
@@ -66,7 +67,7 @@
 
 // Behaviour limits for arms and head
 
-#define ARM_MAX_DEGREES			80
+#define ARM_MAX_DEGREES			40
 #define ARM_SWING_MAX_DEGREES	40
 #define HEAD_SWING_MAX_DEGREES	40
 #define HEAD_SWING_MAX_SPEED	5
@@ -600,10 +601,20 @@ void CreativeRobotix::_updateTextToScroll(boolean reset) {
 
 	l_currentMillis = millis();
 
-	if (reset) {  // Reset the state
+	if (reset) {  // reset the state
 		character = 0;
 		character_previous = 1, character_scroll = 0;
 		current_character = 0, screen = 0, column_update = 0;
+	}
+
+	// take care of special condition when there is only one character to scroll (were current_character acts as a buffer)
+	if (_textToScrollLen == 1) {
+
+		cindex = _textToScrollBuffer[0] - ' ';
+		uint64_t test_character = pgm_read_dword(&(LED_DISPLAY_CHARACTERS[cindex][0])); // High
+		test_character = (test_character << 32) | pgm_read_dword(&(LED_DISPLAY_CHARACTERS[cindex][1])); // Low
+
+		if (test_character != current_character) current_character = test_character;
 	}
 
 	if ((l_currentMillis - l_previousMillis) > _scrollInterval) {
@@ -645,6 +656,17 @@ uint64_t CreativeRobotix::_shiftScreenLeft(uint64_t screen) {
 	}
 
 	return (new_screen);
+}
+
+int8_t CreativeRobotix::_boundWheelVelocity(int8_t velocity) {
+	if (velocity < -WHEEL_SPEED_MAX) {
+		velocity = -WHEEL_SPEED_MAX;
+	}
+	else if (velocity > WHEEL_SPEED_MAX) {
+		velocity = WHEEL_SPEED_MAX;
+	}
+
+	return(velocity);
 }
 
 void CreativeRobotix::_setVelocityLeftWheel(uint8_t velocity) {
@@ -809,6 +831,10 @@ boolean CreativeRobotix::displayScrollText(String text, boolean reset) {
 	return(false);
 }
 
+void CreativeRobotix::displayScrollTextReset(void) {
+		_updateTextToScroll(true);
+}
+
 boolean CreativeRobotix::hasTextToScroll(void) {
 	return(_isTextToScroll);
 }
@@ -832,7 +858,7 @@ boolean CreativeRobotix::displayDigits(uint8_t number) {
 }
 
 boolean CreativeRobotix::displayASCII(uint8_t ascii) {
-	if (ascii >= 0 && ascii < LED_DISPLAY_CHARACTERS_LEN) {
+	if ((ascii - ' ') >= 0 && (ascii - ' ') < LED_DISPLAY_CHARACTERS_LEN) {
 		_isTextToScroll = false;
 		_setLEDDisplayASCII(ascii);
 		return(true);
@@ -842,7 +868,7 @@ boolean CreativeRobotix::displayASCII(uint8_t ascii) {
 
 boolean CreativeRobotix::displayPixel(uint8_t row, uint8_t column, boolean state) {
 	if ((row >= 0 && row < MAX72XX_WIDTH) && (column >= 0 && column < MAX72XX_HEIGHT)) {
-		_ledDisplay.setLed(0, column, row, state);
+		_ledDisplay.setLed(0, row, column, state);
 		return(true);
 	}
 	return(false);
@@ -961,27 +987,13 @@ void CreativeRobotix::readLine(void) {
 }
 
 void CreativeRobotix::wheelLeft(int8_t velocity) {
-	velocity = 90 + velocity;
-
-	if (velocity < 0) {
-		velocity = 0;
-	}
-	else if (velocity > 180) {
-		velocity = 180;
-	}
+	velocity = 90 + _boundWheelVelocity(velocity);
 
 	_setVelocityLeftWheel(velocity);
 }
 
 void CreativeRobotix::wheelRight(int8_t velocity) {
-	velocity = 90 - velocity;
-
-	if (velocity < 0) {
-		velocity = 0;
-	}
-	else if (velocity > 180) {
-		velocity = 180;
-	}
+	velocity = 90 - _boundWheelVelocity(velocity);
 
 	_setVelocityRightWheel(velocity);
 }
@@ -1007,7 +1019,6 @@ void CreativeRobotix::headAngle(int8_t angle, boolean state) {
 }
 
 void CreativeRobotix::lookAround(uint8_t speed, boolean state) {
-	
 	if (state) {
 		if (speed > HEAD_SWING_MAX_SPEED) speed = HEAD_SWING_MAX_SPEED;
 		_headSwingSpeed = speed;

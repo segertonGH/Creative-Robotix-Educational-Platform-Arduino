@@ -57,6 +57,8 @@
 #define LED_SET_ROW_DATA	4
 #define LED_SET_SET_PIXEL	5
 #define LED_SET_CLEAR		6
+#define LED_SET_ASCII		7
+#define LED_RST_SCROLL_TEXT	8
 
 #define HC06_CMD_SETNAME	1
 #define HC06_CMD_SETPIN		2

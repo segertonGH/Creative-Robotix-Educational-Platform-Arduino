@@ -129,8 +129,9 @@ void updateBall(void) {
 	}
 
 	if (ballxold != ballx || ballyold != bally) {  // update ball
-		codee.displayPixel(ballxold, ballyold, false);
-		codee.displayPixel(ballx, bally, true);
+		// x-axis maps to column, y-axis maps to row
+		codee.displayPixel(ballyold, ballxold, false);
+		codee.displayPixel(bally, ballx, true);
 	}
 }
 
@@ -178,16 +179,15 @@ void updateBat(void){
 	}
 
 	if (newPlayerBatPosition != playerBatPosition) {
-		//codee.displayDigits(playerBatPosition);
 		// remove the old bat
-		codee.displayPixel((playerBatPosition - 1) + 0, 0, false);
-		codee.displayPixel((playerBatPosition - 1) + 1, 0, false);
-		codee.displayPixel((playerBatPosition - 1) + 2, 0, false);
+		codee.displayPixel(0, (playerBatPosition - 1) + 0, false);
+		codee.displayPixel(0, (playerBatPosition - 1) + 1, false);
+		codee.displayPixel(0, (playerBatPosition - 1) + 2, false);
 
 		// diplay the new bat
-		codee.displayPixel((newPlayerBatPosition - 1) + 0, 0, true);
-		codee.displayPixel((newPlayerBatPosition - 1) + 1, 0, true);
-		codee.displayPixel((newPlayerBatPosition - 1) + 2, 0, true);
+		codee.displayPixel(0, (newPlayerBatPosition - 1) + 0, true);
+		codee.displayPixel(0, (newPlayerBatPosition - 1) + 1, true);
+		codee.displayPixel(0, (newPlayerBatPosition - 1) + 2, true);
 
 		// update the bat position
 		playerBatPosition = newPlayerBatPosition;

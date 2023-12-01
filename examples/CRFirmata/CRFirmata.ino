@@ -2,16 +2,27 @@
  Name:		CRFirmata.ino
  Created:	29/18/2023 12:40:00 PM
  Author:	Simon Egerton
+
  Firmata is a generic protocol for communicating with microcontrollers
  from software on a host computer. It is intended to work with
  any host computer software package.
  
+ This is a Firmata Server for the Creative Robotix Platform.
+
  To download a host software package, please click on the following link
  to open the list of Firmata client libraries in your default browser.
  
  https://github.com/firmata/arduino#firmata-client-libraries
 
- This is a Firmata Server for the Creative Robotix Platform
+ NOTE: The bluetooth module is given the name set by MY_ROBOTS_NAME and a pin
+ set by MY_ROBOTS_PIN, the baud rate is set to 57600, which is the Firmata defualt.
+ To have these values update the bluetooth moduel on boot the BT_Receive_Enable 
+ and BT_Configure jumpers both need to be set, the USB cable disconnected and Codee 
+ should be powered from batteries.  Once the bluetooth module has been configured, 
+ codee will boot up as usual with a smile, the BT_Configure jumper can then be 
+ removed.  If the bluetooth module fails to update, then Codee will emit a 
+ continious series has harsh tones.  Check that the USB cable has been removed and
+ that the BT_Receive_Enable jumper is set.
 
  Creative Robotix
 
@@ -29,17 +40,9 @@
 #include <Firmata.h>
 #include <CreativeRobotix.h>
 
-// ----------------------------------------------------------------------------
-// NOTE: bluetooth is configured when both the bluetooth config pin and 
-// the bluetooth receive pin are jumped on the Creative Robotix board
-
-// edit this to rename your robots bluetooth connection, you may also rename 
-// your robot via Snap4Arduino
+// give your robot its own name (and pin number, 1234 is typical default)
 #define MY_ROBOTS_NAME		"Codee"
-
-// edit this to give your robot a new bluetooth pin number
 #define MY_ROBOTS_PIN		1234
-// ----------------------------------------------------------------------------
 
 // external reference to codee declaration in CRFirmata.h
 extern CreativeRobotix codee;
