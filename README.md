@@ -187,4 +187,4 @@ Note definitions for use with **playTone** and **playMelody** methods.  Eight oc
 
 ### <ins>Firmata</ins>
 
-The library provides a Firmata server enabling the robot to be controlled via thirdparty packages on a host computer.  The server and has been fully tested with [Snap4Arduino](https://snap4arduino.rocks/) and the available Python [client package](https://pypi.org/project/codeepy/).
+The library provides a Firmata server enabling the robot to be controlled via thirdparty packages on a host computer.  The server has been fully tested with [Snap4Arduino](https://snap4arduino.rocks/) and the available Python [client package](https://pypi.org/project/codeepy/).
