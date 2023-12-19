@@ -757,9 +757,9 @@ void sysexCallback(byte command, byte argc, byte* argv)
 #endif
 		break;
 
-	/////////////////////////////////////////////////////
-	//////// CRE Cases
-	////////////////////////////////////////////////////
+		/////////////////////////////////////////////////////
+		//////// CRE Cases
+		////////////////////////////////////////////////////
 
 	case CRE_ULTRASOUND:
 	{
@@ -838,7 +838,7 @@ void sysexCallback(byte command, byte argc, byte* argv)
 					text.concat((char)argv[i]);
 				}
 				// and reset the scroll 
-				codee.displayScrollText(text); 
+				codee.displayScrollText(text);
 			}
 			else {
 				codee.displayReset();
@@ -955,6 +955,33 @@ void sysexCallback(byte command, byte argc, byte* argv)
 			break;
 		}
 	}
+	case CRE_MISC:
+		uint8_t data;
+		// start SYSEX data response
+		Firmata.write(START_SYSEX);
+		Firmata.write(STRING_DATA);
+		// Write result
+		mode = argv[0];
+		switch (mode) {
+		case CRE_DATA_BATTERY_VOLTAGE:
+			data = codee.readBatteryVoltage(); // deci volts
+			break;
+		case CRE_DATA_HAS_MELODY_TO_PLAY:
+			data = codee.hasMelodytoPlay();
+			break;
+		case CRE_DATA_HAS_TEXT_TO_SCROLL:
+			data = codee.hasTextToScroll();
+			break;
+		case CRE_DATA_HAS_TEXT_TO_SAY:
+			data = codee.hasTextToSay();
+			break;
+		case CRE_DATA_HAS_STOPPED:
+			data = codee.hasStopped();
+			break;
+		}
+		Serial.println((unsigned int)data);
+		// end SYSEX data response 
+		Firmata.write(END_SYSEX);
 	}
 }
 

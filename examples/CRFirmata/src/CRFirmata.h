@@ -36,6 +36,7 @@
 // definitions for creative robotix educational platform
 
 // creaive robotix SYSEX commands
+#define CRE_MISC			0x07
 #define CRE_ULTRASOUND		0x08
 #define CRE_AUDIO			0x09
 #define CRE_LED_DISPLAY		0x0A
@@ -69,6 +70,16 @@
 #define SERVO_ARM_LEFT		3
 #define SERVO_ARM_RIGHT		4
 #define SERVO_HEAD			5
+
+#define MISC_BATTERY		0
+
+// Creative robotix SYSEX command responses
+#define CRE_DATA_BATTERY_VOLTAGE	0
+#define CRE_DATA_HAS_MELODY_TO_PLAY	1
+#define CRE_DATA_HAS_TEXT_TO_SCROLL	2
+#define CRE_DATA_HAS_TEXT_TO_SAY	3
+#define CRE_DATA_HAS_STOPPED		4
+
 
 
 // creative robotix configuration

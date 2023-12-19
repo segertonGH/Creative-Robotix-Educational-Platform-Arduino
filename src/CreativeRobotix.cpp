@@ -430,6 +430,11 @@ CreativeRobotix::CreativeRobotix() {
 	_ledDisplay.shutdown(0, false);		// The MAX72XX is in power-saving mode on startup
 	_ledDisplay.setIntensity(0, 7);		// Set the brightness to (7), maximum value (15)
 	_ledDisplay.clearDisplay(0);		// and clear the display
+
+	// Initialise wheel servos and servo arrays to zero 
+
+	_setVelocityLeftWheel(90);
+	_setVelocityRightWheel(90);
 }
 
 // initialise robot
