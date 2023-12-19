@@ -187,4 +187,4 @@ Note definitions for use with **playTone** and **playMelody** methods.  Eight oc
 
 ### <ins>Firmata</ins>
 
-The library provides Firmata server.  The server and has been tested with [Snap4Arduino](https://snap4arduino.rocks/) and the Python [client package](https://pypi.org/project/codeepy/) which can be installed via "pip install codeepy"
+The library provides a Firmata server.  The server and has been tested with [Snap4Arduino](https://snap4arduino.rocks/) client and the Python [client package](https://pypi.org/project/codeepy/).
